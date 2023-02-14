@@ -8,5 +8,5 @@ Alpine.plugin(focus);
 
 Alpine.start();
 
-import jQuery from 'jquery';
-window.$ = jQuery;
+// import jQuery from 'jquery';
+// window.$ = jQuery;

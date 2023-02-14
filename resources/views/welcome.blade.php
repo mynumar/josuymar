@@ -8,394 +8,97 @@
     <title>Josu&Mar &mdash; !Nos casamos!</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    {{-- <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
 
-    <!-- Styles -->
-    <style>
-        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-        html {
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%
-        }
+    <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 
-        body {
-            margin: 0
-        }
 
-        a {
-            background-color: transparent
-        }
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
 
-        [hidden] {
-            display: none
-        }
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-        html {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            line-height: 1.5
-        }
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
-        *,
-        :after,
-        :before {
-            box-sizing: border-box;
-            border: 0 solid #e2e8f0
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit
-        }
-
-        svg,
-        video {
-            display: block;
-            vertical-align: middle
-        }
-
-        video {
-            max-width: 100%;
-            height: auto
-        }
-
-        .bg-white {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-        }
-
-        .bg-gray-100 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(243 244 246 / var(--tw-bg-opacity))
-        }
-
-        .border-gray-200 {
-            --tw-border-opacity: 1;
-            border-color: rgb(229 231 235 / var(--tw-border-opacity))
-        }
-
-        .border-t {
-            border-top-width: 1px
-        }
-
-        .flex {
-            display: flex
-        }
-
-        .grid {
-            display: grid
-        }
-
-        .hidden {
-            display: none
-        }
-
-        .items-center {
-            align-items: center
-        }
-
-        .justify-center {
-            justify-content: center
-        }
-
-        .font-semibold {
-            font-weight: 600
-        }
-
-        .h-5 {
-            height: 1.25rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
-        .h-16 {
-            height: 4rem
-        }
-
-        .text-sm {
-            font-size: .875rem
-        }
-
-        .text-lg {
-            font-size: 1.125rem
-        }
-
-        .leading-7 {
-            line-height: 1.75rem
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .ml-1 {
-            margin-left: .25rem
-        }
-
-        .mt-2 {
-            margin-top: .5rem
-        }
-
-        .mr-2 {
-            margin-right: .5rem
-        }
-
-        .ml-2 {
-            margin-left: .5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .ml-4 {
-            margin-left: 1rem
-        }
-
-        .mt-8 {
-            margin-top: 2rem
-        }
-
-        .ml-12 {
-            margin-left: 3rem
-        }
-
-        .-mt-px {
-            margin-top: -1px
-        }
-
-        .max-w-6xl {
-            max-width: 72rem
-        }
-
-        .min-h-screen {
-            min-height: 100vh
-        }
-
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .p-6 {
-            padding: 1.5rem
-        }
-
-        .py-4 {
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
-        .pt-8 {
-            padding-top: 2rem
-        }
-
-        .fixed {
-            position: fixed
-        }
-
-        .relative {
-            position: relative
-        }
-
-        .top-0 {
-            top: 0
-        }
-
-        .right-0 {
-            right: 0
-        }
-
-        .shadow {
-            --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
-            --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-gray-200 {
-            --tw-text-opacity: 1;
-            color: rgb(229 231 235 / var(--tw-text-opacity))
-        }
-
-        .text-gray-300 {
-            --tw-text-opacity: 1;
-            color: rgb(209 213 219 / var(--tw-text-opacity))
-        }
-
-        .text-gray-400 {
-            --tw-text-opacity: 1;
-            color: rgb(156 163 175 / var(--tw-text-opacity))
-        }
-
-        .text-gray-500 {
-            --tw-text-opacity: 1;
-            color: rgb(107 114 128 / var(--tw-text-opacity))
-        }
-
-        .text-gray-600 {
-            --tw-text-opacity: 1;
-            color: rgb(75 85 99 / var(--tw-text-opacity))
-        }
-
-        .text-gray-700 {
-            --tw-text-opacity: 1;
-            color: rgb(55 65 81 / var(--tw-text-opacity))
-        }
-
-        .text-gray-900 {
-            --tw-text-opacity: 1;
-            color: rgb(17 24 39 / var(--tw-text-opacity))
-        }
-
-        .underline {
-            text-decoration: underline
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .w-5 {
-            width: 1.25rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
-        .w-auto {
-            width: auto
-        }
-
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr))
-        }
-
-        @media (min-width:640px) {
-            .sm\:rounded-lg {
-                border-radius: .5rem
-            }
-
-            .sm\:block {
-                display: block
-            }
-
-            .sm\:items-center {
-                align-items: center
-            }
-
-            .sm\:justify-start {
-                justify-content: flex-start
-            }
-
-            .sm\:justify-between {
-                justify-content: space-between
-            }
-
-            .sm\:h-20 {
-                height: 5rem
-            }
-
-            .sm\:ml-0 {
-                margin-left: 0
-            }
-
-            .sm\:px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
-            .sm\:pt-0 {
-                padding-top: 0
-            }
-
-            .sm\:text-left {
-                text-align: left
-            }
-
-            .sm\:text-right {
-                text-align: right
-            }
-        }
-
-        @media (min-width:768px) {
-            .md\:border-t-0 {
-                border-top-width: 0
-            }
-
-            .md\:border-l {
-                border-left-width: 1px
-            }
-
-            .md\:grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
-            }
-        }
-
-        @media (min-width:1024px) {
-            .lg\:px-8 {
-                padding-left: 2rem;
-                padding-right: 2rem
-            }
-        }
-
-        @media (prefers-color-scheme:dark) {
-            .dark\:bg-gray-800 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(31 41 55 / var(--tw-bg-opacity))
-            }
-
-            .dark\:bg-gray-900 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(17 24 39 / var(--tw-bg-opacity))
-            }
-
-            .dark\:border-gray-700 {
-                --tw-border-opacity: 1;
-                border-color: rgb(55 65 81 / var(--tw-border-opacity))
-            }
-
-            .dark\:text-white {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
-            }
-
-            .dark\:text-gray-400 {
-                --tw-text-opacity: 1;
-                color: rgb(156 163 175 / var(--tw-text-opacity))
-            }
-
-            .dark\:text-gray-500 {
-                --tw-text-opacity: 1;
-                color: rgb(107 114 128 / var(--tw-text-opacity))
-            }
-        }
-    </style>
+    <!-- Theme style  -->
     <link rel="stylesheet" href="http://localhost/josuymar/public/css/style.css">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    
 </head>
 
 <body class="antialiased">
     <div class="fh5co-loader"></div>
+    <div id="page">        
+        <nav class="fh5co-nav" role="navigation">
+            hhhhhhhhhhhhhhhhhh
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="fh5co-logo"><a href="index.html">Nuestro matrimonio<strong>.</strong></a></div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="index.html">Inicio</a></li>
+                            <li><a href="about.html">Historia</a></li>
+                            <li class="has-dropdown">
+                                <a href="services.html">Invitados</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Padres</a></li>
+                                    <li><a href="#">Testigos</a></li>
+                                    <li><a href="#">Damitas</a></li>
+                                    <li><a href="#">Pajes</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="gallery.html">Galería</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Pedida</a></li>
+                                    <!-- <li><a href="#">CSS3</a></li>
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">jQuery</a></li> -->
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Deseos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
+        <header id="fh5co-header" class="fh5co-cover" role="banner"
+            style="background-image:url(images/CC_Pedida6.jpg); background-position: center;"
+            data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h1>Josué &amp; Marjorie</h1>
+                                <h2>Nos casamos en</h2>
+                                <div class="simply-countdown simply-countdown-one"></div>
+                                <p><a href="#" class="btn btn-default btn-sm">Confirmar mi asistencia</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+    </div>
+
+    {{-- 
     <div
         class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         @if (Route::has('login'))
@@ -549,8 +252,28 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- countTo -->
+    <script src="js/jquery.countTo.js"></script>
+
+    <!-- Stellar -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+
+    <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
 </body>
