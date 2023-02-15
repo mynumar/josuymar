@@ -11,8 +11,8 @@
     {{-- <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
 
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
-		type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 
 
     <!-- Animate.css -->
@@ -34,14 +34,13 @@
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    
+
 </head>
 
 <body class="antialiased">
     <div class="fh5co-loader"></div>
-    <div id="page">        
+    <div id="page">
         <nav class="fh5co-nav" role="navigation">
-            hhhhhhhhhhhhhhhhhh
             <div class="container">
                 <div class="row">
                     <div class="col-xs-2">
@@ -65,14 +64,15 @@
                                 <ul class="dropdown">
                                     <li><a href="#">Pedida</a></li>
                                     <!-- <li><a href="#">CSS3</a></li>
-        <li><a href="#">Sass</a></li>
-        <li><a href="#">jQuery</a></li> -->
+                                        <li><a href="#">Sass</a></li>
+                                        <li><a href="#">jQuery</a></li> -->
                                 </ul>
                             </li>
                             <li><a href="contact.html">Deseos</a></li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </nav>
 
@@ -95,6 +95,372 @@
                 </div>
             </div>
         </header>
+
+        <div id="fh5co-couple">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <h2>¡Hola!</h2>
+                        <h3>19 de Mayo, 2023 Lima, Perú</h3>
+                        <p>Te invitamos a celebrar nuestra boda</p>
+                    </div>
+                </div>
+                <div class="couple-wrap animate-box">
+                    <div class="couple-half">
+                        <div class="groom">
+                            <img src="images/SP_josu3.jpg" alt="SP_josu2" class="img-responsive">
+                        </div>
+                        <div class="desc-groom">
+                            <h3>Josué Vitate</h3>
+                            <p>La luz de su alma iluminaron mi vida desde la primera vez que la vi. Nacido en Lima un 22
+                                de septiembre de 1993. Sirvió una misión en Bolivia La Paz en 2012 -2014.</p>
+                        </div>
+                    </div>
+                    <p class="heart text-center"><i class="icon-heart2"></i></p>
+                    <div class="couple-half">
+                        <div class="bride">
+                            <img src="images/SP_marjo2.jpg" alt="SP_marjo" class="img-responsive">
+                        </div>
+                        <div class="desc-bride">
+                            <h3>Marjorie Ynuma</h3>
+                            <p>La ternura con la que sus ojos me miran han llegado a mi corazón y son los causantes de
+                                amarlo. Quiero que esos mismos ojos me acompañen en las eternidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/bg_02.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Nuestros eventos especiales</span>
+                        <h2>Eventos de la boda</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="display-t">
+                        <div class="display-tc">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>Ceremonia Civil</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>3:00 PM</span>
+                                            <span>4:00 PM</span>
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>Jueves 18</span>
+                                            <span>Mayo, 2023</span>
+                                        </div>
+                                        <p>CEREMONIA PRIVADA<br><br>Palacio de la Cultura<br></p>
+                                        <p><i class="icon-location-pin"></i>Av. San Lorenzo 426b, Puente Piedra 15121
+                                        </p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>Sellamiento</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>02:00 PM</span>
+                                            <span>03:00 PM</span>
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>Viernes 19</span>
+                                            <span>Mayo, 2023</span>
+                                        </div>
+                                        <p>Templo de la Iglesia de Jesucristo de los Santos de los Últimos Días</p>
+                                        <p><i class="icon-location-pin"></i>Av. Javier Prado Este 6420, La Molina 15024
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>Fiesta de bodas</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>08:00 PM</span>
+                                            <span>02:00 AM</span>
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>Viernes 19</span>
+                                            <span>Mayo, 2023</span>
+                                        </div>
+                                        <p>CAREMONIA CENTRAL<br><br>Boda campestre<br><br></p>
+                                        <p><i class="icon-location-pin"></i>Crabayllo, Lima, Perú<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="fh5co-couple-story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Nosotros Nos Amamos</span>
+                        <h2>Nuestra Historia</h2>
+                        <p>Nos encantará hacerte parte de nuestra historia</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-0">
+                        <ul class="timeline animate-box">
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">La primera vez que nos vimos</h3>
+                                        <span class="date">Abril 03, 2023</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            Nuestro primer encuentro fue muy 2020. Hablamos por zoom muchas veces para
+                                            coordinar un proyecto para el PFJ y cada día nos conocíamos más. En una
+                                            reunión presencial, Josué participó desde el podio y al finalizar la reunión
+                                            Marjorie se acercó a él para presentarse.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/04-02.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Primera Cita</h3>
+                                        <span class="date">Mayo 09, 2023</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            Nuestra primera cita fue en el cine, vimos una película de Marvel. Era la
+                                            primera vez que ella veía este tipo de película. Fue una buena excusa para
+                                            tratarnos en persona y alimentar nuestra amistad.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/04-03.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">En una relación</h3>
+                                        <span class="date">Julio 31, 2023</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            Josué siempre es el detallista de la relación y para pedirme que sea su
+                                            novia no fue la excepción. De regreso en una viaje, me trajo de recuerdo un
+                                            llavero que llevaba escrito la pregunta que cambiaría nuestro futuro:
+                                            ¿Quieres
+                                            ser mi novia?
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge" style="background-image:url(images/04-04.jpg);"></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">Nuestro compromiso</h3>
+                                        <span class="date">Diciembre 08, 2023</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>
+                                            Desde el primer momento que empezamos a ser novios, sabíamos nuestra meta
+                                            principal y cada día nos esforzámos por llegar a alcanzarla. Aunque ya
+                                            habíamos hablado del tema, Josué quería que la pedida quedara con un
+                                            recuerdo más que hermoso.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="fh5co-gallery" class="fh5co-section-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                        <span>Nuestros recuerdos</span>
+                        <h2>Galería de bodas</h2>
+                        <p>Esperamos que hayan muchos recuerdos con ustedes</p>
+                    </div>
+                </div>
+                <div class="row row-bottom-padded-md">
+                    <div class="col-md-12">
+                        <ul id="fh5co-gallery-list">
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-1.jpg); ">
+                                <a href="images/gallery-1.jpg">
+                                    <div class="case-studies-summary">
+                                        <span>14 Photos</span>
+                                        <h2>Two Glas of Juice</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-2.jpg); ">
+                                <a href="#" class="color-2">
+                                    <div class="case-studies-summary">
+                                        <span>30 Photos</span>
+                                        <h2>Timer starts now!</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-3.jpg); ">
+                                <a href="#" class="color-3">
+                                    <div class="case-studies-summary">
+                                        <span>90 Photos</span>
+                                        <h2>Beautiful sunset</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-4.jpg); ">
+                                <a href="#" class="color-4">
+                                    <div class="case-studies-summary">
+                                        <span>12 Photos</span>
+                                        <h2>Company's Conference Room</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-5.jpg); ">
+                                <a href="#" class="color-3">
+                                    <div class="case-studies-summary">
+                                        <span>50 Photos</span>
+                                        <h2>Useful baskets</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-6.jpg); ">
+                                <a href="#" class="color-4">
+                                    <div class="case-studies-summary">
+                                        <span>45 Photos</span>
+                                        <h2>Skater man in the road</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-7.jpg); ">
+                                <a href="#" class="color-4">
+                                    <div class="case-studies-summary">
+                                        <span>35 Photos</span>
+                                        <h2>Two Glas of Juice</h2>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-8.jpg); ">
+                                <a href="#" class="color-5">
+                                    <div class="case-studies-summary">
+                                        <span>90 Photos</span>
+                                        <h2>Timer starts now!</h2>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="one-third animate-box" data-animate-effect="fadeIn"
+                                style="background-image: url(images/gallery-9.jpg); ">
+                                <a href="#" class="color-6">
+                                    <div class="case-studies-summary">
+                                        <span>56 Photos</span>
+                                        <h2>Beautiful sunset</h2>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_bg_5.jpg);">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="display-t">
+                        <div class="display-tc">
+                            <div class="col-md-3 col-sm-6 animate-box">
+                                <div class="feature-center">
+                                    <span class="icon">
+                                        <i class="icon-users"></i>
+                                    </span>
+
+                                    <span class="counter js-counter" data-from="0" data-to="500" data-speed="5000"
+                                        data-refresh-interval="50">1</span>
+                                    <span class="counter-label">Invitaciones enviadas</span>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 animate-box">
+                                <div class="feature-center">
+                                    <span class="icon">
+                                        <i class="icon-user"></i>
+                                    </span>
+
+                                    <span class="counter js-counter" data-from="0" data-to="1000" data-speed="5000"
+                                        data-refresh-interval="50">1</span>
+                                    <span class="counter-label">Confirmados</span>
+                                </div>
+                            </div>
+                            {{-- <div class="col-md-3 col-sm-6 animate-box">
+                                <div class="feature-center">
+                                    <span class="icon">
+                                        <i class="icon-calendar"></i>
+                                    </span>
+                                    <span class="counter js-counter" data-from="0" data-to="402" data-speed="5000"
+                                        data-refresh-interval="50">1</span>
+                                    <span class="counter-label">Events Done</span>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6 animate-box">
+                                <div class="feature-center">
+                                    <span class="icon">
+                                        <i class="icon-clock"></i>
+                                    </span>
+
+                                    <span class="counter js-counter" data-from="0" data-to="2345" data-speed="5000"
+                                        data-refresh-interval="50">1</span>
+                                    <span class="counter-label">Hours Spent</span>
+
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-testimonial">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
 
     </div>
 
@@ -276,6 +642,27 @@
     <script src="js/simplyCountdown.js"></script>
     <!-- Main -->
     <script src="js/main.js"></script>
+
+    <script>
+        // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+        var d = new Date('2023-05-19 20:00:00 GMT-5:00');
+
+
+        // default example
+        simplyCountdown('.simply-countdown-one', {
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate()
+        });
+
+        //jQuery example
+        $('#simply-countdown-losange').simplyCountdown({
+            year: d.getFullYear(),
+            month: d.getMonth() + 1,
+            day: d.getDate(),
+            enableUtc: false
+        });
+    </script>
 </body>
 
 </html>
