@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('invitados', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('apellidos');
+            $table->string('telefono');
+            $table->string('dni');
+            $table->string('correo');
+            $table->tinyInteger('tipo');
+            $table->tinyInteger('por');
+            $table->foreignId('grupo_id')->constrained();
             $table->timestamps();
         });
     }
