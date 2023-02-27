@@ -224,7 +224,7 @@
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title">La primera vez que nos vimos</h3>
-                                        <span class="date">Abril 03, 2023</span>
+                                        <span class="date">Abril 03, 2022</span>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
