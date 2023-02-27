@@ -22,8 +22,8 @@
                     </div>
                     <div class="desc-groom">
                         <h3>Josué Vitate</h3>
-                        <p>La luz de su alma iluminaron mi vida desde la primera vez que la vi. Nacido en Lima un 22
-                            de septiembre de 1993. Sirvió una misión en Bolivia La Paz en 2012 -2014.</p>
+                        <p>Desde que la vi la pureza de su alma me hizo querer conocerla. Al caminar juntos me doy 
+                            cuenta de que es ella capaz de ayudarme a llegar a la Gloria Celestial.</p>
                     </div>
                 </div>
                 <p class="heart text-center"><i class="icon-heart2"></i></p>
