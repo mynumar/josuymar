@@ -16,24 +16,24 @@
 
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/animate.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/icomoon.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/bootstrap.css">
 
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/magnific-popup.css">
 
     <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{config('app.url')}}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
 
     <!-- Theme style  -->
-    <link rel="stylesheet" href="{{config('app.url')}}/css/style.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/style.css">
 
     <!-- Modernizr JS -->
-    <script src="{{config('app.url')}}/js/modernizr-2.6.2.min.js"></script>
+    <script src="{{ config('app.url') }}/js/modernizr-2.6.2.min.js"></script>
 
 </head>
 
@@ -48,8 +48,8 @@
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="active"><a href="index.html">Inicio</a></li>
-                            <li><a href="about.html">Historia</a></li>
+                            <li class="active"><a href="{{ route('index') }}">Inicio</a></li>
+                            <li><a href="{{ route('historia.index') }}">Historia</a></li>
                             <li class="has-dropdown">
                                 <a href="services.html">Invitados</a>
                                 <ul class="dropdown">
@@ -77,7 +77,7 @@
         </nav>
 
         <header id="fh5co-header" class="fh5co-cover" role="banner"
-            style="background-image:url({{config('app.url')}}/images/CC_Pedida6.jpg); background-position: center;"
+            style="background-image:url({{ config('app.url') }}/images/CC_Pedida6.jpg); background-position: center;"
             data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
@@ -108,7 +108,8 @@
                 <div class="couple-wrap animate-box">
                     <div class="couple-half">
                         <div class="groom">
-                            <img src="{{config('app.url')}}/images/SP_josu3.jpg" alt="SP_josu2" class="img-responsive">
+                            <img src="{{ config('app.url') }}/images/SP_josu3.jpg" alt="SP_josu2"
+                                class="img-responsive">
                         </div>
                         <div class="desc-groom">
                             <h3>Josué Vitate</h3>
@@ -119,7 +120,8 @@
                     <p class="heart text-center"><i class="icon-heart2"></i></p>
                     <div class="couple-half">
                         <div class="bride">
-                            <img src="{{config('app.url')}}/images/SP_marjo2.jpg" alt="SP_marjo" class="img-responsive">
+                            <img src="{{ config('app.url') }}/images/SP_marjo2.jpg" alt="SP_marjo"
+                                class="img-responsive">
                         </div>
                         <div class="desc-bride">
                             <h3>Marjorie Ynuma</h3>
@@ -131,7 +133,7 @@
             </div>
         </div>
 
-        <div id="fh5co-event" class="fh5co-bg" style="background-image:url({{config('app.url')}}/images/bg_02.jpg);">
+        <div id="fh5co-event" class="fh5co-bg" style="background-image:url({{ config('app.url') }}/images/bg_02.jpg);">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -219,7 +221,8 @@
                     <div class="col-md-12 col-md-offset-0">
                         <ul class="timeline animate-box">
                             <li class="animate-box">
-                                <div class="timeline-badge" style="background-image:url({{config('app.url')}}/images/couple-1.jpg);"></div>
+                                <div class="timeline-badge"
+                                    style="background-image:url({{ config('app.url') }}/images/couple-1.jpg);"></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title">La primera vez que nos vimos</h3>
@@ -236,7 +239,8 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted animate-box">
-                                <div class="timeline-badge" style="background-image:url({{config('app.url')}}/images/04-02.jpg);"></div>
+                                <div class="timeline-badge"
+                                    style="background-image:url({{ config('app.url') }}/images/04-02.jpg);"></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title">Primera Cita</h3>
@@ -252,7 +256,8 @@
                                 </div>
                             </li>
                             <li class="animate-box">
-                                <div class="timeline-badge" style="background-image:url({{config('app.url')}}/images/04-03.jpg);"></div>
+                                <div class="timeline-badge"
+                                    style="background-image:url({{ config('app.url') }}/images/04-03.jpg);"></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title">En una relación</h3>
@@ -270,7 +275,8 @@
                                 </div>
                             </li>
                             <li class="timeline-inverted animate-box">
-                                <div class="timeline-badge" style="background-image:url({{config('app.url')}}/images/04-04.jpg);"></div>
+                                <div class="timeline-badge"
+                                    style="background-image:url({{ config('app.url') }}/images/04-04.jpg);"></div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
                                         <h3 class="timeline-title">Nuestro compromiso</h3>
@@ -307,8 +313,8 @@
                         <ul id="fh5co-gallery-list">
 
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-1.jpg); ">
-                                <a href="{{config('app.url')}}/images/gallery-1.jpg">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-1.jpg); ">
+                                <a href="{{ config('app.url') }}/images/gallery-1.jpg">
                                     <div class="case-studies-summary">
                                         <span>14 Photos</span>
                                         <h2>Two Glas of Juice</h2>
@@ -316,7 +322,7 @@
                                 </a>
                             </li>
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-2.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-2.jpg); ">
                                 <a href="#" class="color-2">
                                     <div class="case-studies-summary">
                                         <span>30 Photos</span>
@@ -326,7 +332,7 @@
                             </li>
 
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-3.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-3.jpg); ">
                                 <a href="#" class="color-3">
                                     <div class="case-studies-summary">
                                         <span>90 Photos</span>
@@ -335,7 +341,7 @@
                                 </a>
                             </li>
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-4.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-4.jpg); ">
                                 <a href="#" class="color-4">
                                     <div class="case-studies-summary">
                                         <span>12 Photos</span>
@@ -345,7 +351,7 @@
                             </li>
 
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-5.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-5.jpg); ">
                                 <a href="#" class="color-3">
                                     <div class="case-studies-summary">
                                         <span>50 Photos</span>
@@ -354,7 +360,7 @@
                                 </a>
                             </li>
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-6.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-6.jpg); ">
                                 <a href="#" class="color-4">
                                     <div class="case-studies-summary">
                                         <span>45 Photos</span>
@@ -364,7 +370,7 @@
                             </li>
 
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-7.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-7.jpg); ">
                                 <a href="#" class="color-4">
                                     <div class="case-studies-summary">
                                         <span>35 Photos</span>
@@ -374,7 +380,7 @@
                             </li>
 
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-8.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-8.jpg); ">
                                 <a href="#" class="color-5">
                                     <div class="case-studies-summary">
                                         <span>90 Photos</span>
@@ -383,7 +389,7 @@
                                 </a>
                             </li>
                             <li class="one-third animate-box" data-animate-effect="fadeIn"
-                                style="background-image: url({{config('app.url')}}/images/gallery-9.jpg); ">
+                                style="background-image: url({{ config('app.url') }}/images/gallery-9.jpg); ">
                                 <a href="#" class="color-6">
                                     <div class="case-studies-summary">
                                         <span>56 Photos</span>
@@ -397,7 +403,8 @@
             </div>
         </div>
 
-        <div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url({{config('app.url')}}/images/img_bg_5.jpg);">
+        <div id="fh5co-counter" class="fh5co-bg fh5co-counter"
+            style="background-image:url({{ config('app.url') }}/images/img_bg_5.jpg);">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -458,54 +465,57 @@
             <div class="container">
                 <div class="row">
                     <div class="row animate-box">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<span>Mejores deseos</span>
-							<h2>Deseos de nuestros amigos</h2>
-						</div>
-					</div>
+                        <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                            <span>Mejores deseos</span>
+                            <h2>Deseos de nuestros amigos</h2>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12 animate-box">
                             <div class="wrap-testimony">
                                 <div class="owl-carousel-fullwidth">
                                     <div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="{{config('app.url')}}/images/couple-1.jpg" alt="user">
-											</figure>
-											<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-											<blockquote>
-												<p>"Far far away, behind the word mountains, far from the countries
-													Vokalia and Consonantia, there live the blind texts. Separated they
-													live in Bookmarksgrove right at the coast of the Semantics"</p>
-											</blockquote>
-										</div>
-									</div>
+                                        <div class="testimony-slide active text-center">
+                                            <figure>
+                                                <img src="{{ config('app.url') }}/images/couple-1.jpg"
+                                                    alt="user">
+                                            </figure>
+                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                                            <blockquote>
+                                                <p>"Far far away, behind the word mountains, far from the countries
+                                                    Vokalia and Consonantia, there live the blind texts. Separated they
+                                                    live in Bookmarksgrove right at the coast of the Semantics"</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                     <div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="{{config('app.url')}}/images/couple-2.jpg" alt="user">
-											</figure>
-											<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-											<blockquote>
-												<p>"Far far away, behind the word mountains, far from the countries
-													Vokalia and Consonantia, at the coast of the Semantics, a large
-													language ocean."</p>
-											</blockquote>
-										</div>
-									</div>
+                                        <div class="testimony-slide active text-center">
+                                            <figure>
+                                                <img src="{{ config('app.url') }}/images/couple-2.jpg"
+                                                    alt="user">
+                                            </figure>
+                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                                            <blockquote>
+                                                <p>"Far far away, behind the word mountains, far from the countries
+                                                    Vokalia and Consonantia, at the coast of the Semantics, a large
+                                                    language ocean."</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                     <div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="{{config('app.url')}}/images/couple-3.jpg" alt="user">
-											</figure>
-											<span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-											<blockquote>
-												<p>"Far far away, far from the countries Vokalia and Consonantia, there
-													live the blind texts. Separated they live in Bookmarksgrove right at
-													the coast of the Semantics, a large language ocean."</p>
-											</blockquote>
-										</div>
-									</div>
+                                        <div class="testimony-slide active text-center">
+                                            <figure>
+                                                <img src="{{ config('app.url') }}/images/couple-3.jpg"
+                                                    alt="user">
+                                            </figure>
+                                            <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
+                                            <blockquote>
+                                                <p>"Far far away, far from the countries Vokalia and Consonantia, there
+                                                    live the blind texts. Separated they live in Bookmarksgrove right at
+                                                    the coast of the Semantics, a large language ocean."</p>
+                                            </blockquote>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -514,8 +524,10 @@
             </div>
         </div>
 
-        
+    </div>
 
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
 
     {{-- 
@@ -675,27 +687,27 @@
     </div> --}}
 
     <!-- jQuery -->
-    <script src="{{config('app.url')}}/js/jquery.min.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.min.js"></script>
     <!-- jQuery Easing -->
-    <script src="{{config('app.url')}}/js/jquery.easing.1.3.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-    <script src="{{config('app.url')}}/js/bootstrap.min.js"></script>
+    <script src="{{ config('app.url') }}/js/bootstrap.min.js"></script>
     <!-- Waypoints -->
-    <script src="{{config('app.url')}}/js/jquery.waypoints.min.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.waypoints.min.js"></script>
     <!-- Carousel -->
-    <script src="{{config('app.url')}}/js/owl.carousel.min.js"></script>
+    <script src="{{ config('app.url') }}/js/owl.carousel.min.js"></script>
     <!-- countTo -->
-    <script src="{{config('app.url')}}/js/jquery.countTo.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.countTo.js"></script>
 
     <!-- Stellar -->
-    <script src="{{config('app.url')}}/js/jquery.stellar.min.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.stellar.min.js"></script>
     <!-- Magnific Popup -->
-    <script src="{{config('app.url')}}/js/jquery.magnific-popup.min.js"></script>
-    <script src="{{config('app.url')}}/js/magnific-popup-options.js"></script>
+    <script src="{{ config('app.url') }}/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{ config('app.url') }}/js/magnific-popup-options.js"></script>
 
-    <script src="{{config('app.url')}}/js/simplyCountdown.js"></script>
+    <script src="{{ config('app.url') }}/js/simplyCountdown.js"></script>
     <!-- Main -->
-    <script src="{{config('app.url')}}/js/main.js"></script>
+    <script src="{{ config('app.url') }}/js/main.js"></script>
 
     <script>
         // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);

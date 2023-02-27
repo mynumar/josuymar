@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DeseoController;
+use App\Http\Controllers\HistoriaController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [HomeController::class, 'index'])->name('index');
+
+Route::resource('historia', HistoriaController::class)->names('historia');
+Route::resource('deseos', DeseoController::class)->names('deseos');
+
+
 
 Route::middleware([
     'auth:sanctum',
