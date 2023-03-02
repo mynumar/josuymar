@@ -22,10 +22,8 @@
                     </div>
                     <div class="desc-groom">
                         <h3>Josué Vitate</h3>
-                        <p>
-                            Desde que la vi la pureza de su alma me hizo querer conocerla. Al caminar juntos me doy
-                            cuenta de que es ella capaz de ayudarme a llegar a la Gloria Celestial.
-                        </p>
+                        <p>Desde que la vi la pureza de su alma me hizo querer conocerla. Al caminar juntos me doy 
+                            cuenta de que es ella capaz de ayudarme a llegar a la Gloria Celestial.</p>
                     </div>
                 </div>
                 <p class="heart text-center"><i class="icon-heart2"></i></p>

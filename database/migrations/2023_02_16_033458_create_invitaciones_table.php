@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('invitaciones', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('evento_id')->constrained();
+            $table->foreignId('grupo_id')->constrained();
+            $table->tinyInteger('estado');
+            $table->datetime('fecha_enviada');
+            $table->datetime('fecha_respuesta');
+            $table->tinyInteger('cantidad');
+            $table->tinyInteger('cantidad_confirmada');
+            $table->tinyInteger('cantidad_rechazada');
+            $table->string('ticket');
             $table->timestamps();
         });
     }
