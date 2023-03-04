@@ -6,3 +6,5 @@ use App\Http\Controllers\admin\InvitacioneController;
 
 Route::resource('', HomeController::class)->names('admin');
 Route::resource('invitaciones', InvitacioneController::class)->names('admin.invitaciones');
+
+Route::post('invitaciones/importInvitaciones', [InvitacioneController::class, 'importInvitaciones'])->name('admin.invitaciones.importInvitaciones');

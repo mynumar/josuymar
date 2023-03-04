@@ -3,7 +3,7 @@
         <h1>Josué &amp; Marjorie</h1>
         <h2>Nos casamos en</h2>
         <div class="simply-countdown simply-countdown-one"></div>
-        <p><a href="#" class="btn btn-default btn-sm">Confirmar mi asistencia</a></p>
+        <p><a href="{{route('confirmar-asistencia')}}" class="btn btn-default btn-sm">Confirmar mi asistencia</a></p>
     </x-slot>
 
     <div id="fh5co-couple">
