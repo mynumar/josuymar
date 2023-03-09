@@ -23,7 +23,7 @@ return new class extends Migration
             $table->tinyInteger('cantidad');
             $table->tinyInteger('cantidad_confirmada');
             $table->tinyInteger('cantidad_rechazada');
-            $table->string('ticket');
+            $table->string('codigo');
             $table->timestamps();
         });
     }

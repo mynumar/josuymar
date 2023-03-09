@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Imports\InvitadosImport;
 use App\Models\Invitacione;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Validation\ValidationException;
 
 class InvitacioneController extends Controller
 {
@@ -82,5 +85,28 @@ class InvitacioneController extends Controller
     public function destroy(Invitacione $invitacione)
     {
         //
+    }
+
+    public function importInvitaciones(Request $request){
+
+        $request->validate([
+            'file' => 'required',
+        ]);
+
+        $file = $request->file('file');
+        $tipo = $request->tipo;
+
+        try {
+            Excel::import(new InvitadosImport(), $file);
+
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $failures = $e->failures();
+            //dd($failures);
+
+            $exception = ValidationException::withMessages(collect($failures)->map->toArray()->all());
+            throw $exception;
+        }
+
+        return redirect()->route('admin.invitaciones.index')->with('info', 'Se cargó los invitados correctamente');
     }
 }

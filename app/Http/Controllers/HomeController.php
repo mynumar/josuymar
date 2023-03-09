@@ -22,9 +22,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function confirmarAsistencia()
     {
-        //
+        return view('confirmar-asistencia');
     }
 
     /**
