@@ -82,7 +82,7 @@
                     <div class="display-tc">
                         <div class="col-md-10 col-md-offset-1">
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
                                         <a href="#">
@@ -105,7 +105,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
                                         <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
@@ -127,7 +127,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
                                         <a href="#">
@@ -151,7 +151,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
                                         <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
@@ -173,7 +173,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
                                         <a href="#">
@@ -197,7 +197,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
                                         <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
@@ -220,7 +220,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
                                         <a href="#">
@@ -244,7 +244,7 @@
                             </div>
 
                             <div class="col-12">
-                                <div class="media event-wrap"
+                                <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
                                         <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
