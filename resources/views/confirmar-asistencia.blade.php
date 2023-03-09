@@ -8,7 +8,7 @@
         </h2>
     </x-slot>
     <div id="fh5co-couple-story">
-        <div class="container">
+        <div class="container m-auto">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                     <span>Nosotros Nos Amamos</span>

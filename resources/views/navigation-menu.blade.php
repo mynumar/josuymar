@@ -1,5 +1,5 @@
 <nav x-data="{ open: false }" class="fh5co-nav" role="navigation">
-    <div class="container">
+    <div class="container m-auto">
         <div class="row">
             <div class="col-xs-2">
                 <div id="fh5co-logo"><a href="index.html">Nuestro matrimonio<strong>.</strong></a></div>

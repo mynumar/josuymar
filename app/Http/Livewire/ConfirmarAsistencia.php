@@ -18,10 +18,12 @@ class ConfirmarAsistencia extends Component
                         ->whereHas('grupo', function ($q) use($that){
                             $q->where('name', $that->apellido);
                         })
-                        ->get();
+                        ->first();
 
         if (!empty($invitacione)) {
             $this->invitacione = $invitacione;
+        } else {
+            $this->invitacione = '';
         }
 
     }

@@ -14,4 +14,8 @@ class Grupo extends Model
     public function invitados(){
         return $this->hasMany(Invitado::class);
     }
+
+    public function invitaciones(){
+        return $this->hasMany(Invitacione::class);
+    }
 }

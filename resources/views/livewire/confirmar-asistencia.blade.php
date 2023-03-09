@@ -13,8 +13,7 @@
         @if (!empty($invitacione))
         @foreach ($invitacione->grupo->invitados as $invitado)
         <div>
-            <input type="text" wire:model="apellido" placeholder="Apellido">
-            <input type="text" wire:model="codigo" placeholder="Código">
+            <input type="text" value="{{$invitado->nombre}}" placeholder="Apellido">
         </div>
         @endforeach
         @endif

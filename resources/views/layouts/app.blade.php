@@ -67,7 +67,7 @@
                 style="background-image:url({{ config('app.url') }}/images/CC_Pedida6.jpg); background-position: center;"
                 data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
-                <div class="container">
+                <div class="container m-auto">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center">
                             <div class="display-t">
@@ -85,8 +85,7 @@
         <main>
             {{ $slot }}
             <footer id="fh5co-footer" role="contentinfo">
-                <div class="container">
-
+                <div class="container m-auto">
                     <div class="row copyright">
                         <div class="col-md-12 text-center">
                             <p>

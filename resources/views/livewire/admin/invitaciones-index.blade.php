@@ -26,29 +26,26 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Apellidos</th>
-                            <th>Nombres</th>
-                            <th>Telefono</th>
-                            <th>Correo electrónico</th>
-                            <th>Fecha de confirmación</th>
-                            <th>Cantidad</th>
-                            <th>Asignación</th>
+                            {{-- <th>Id</th> --}}
+                            <th>Código</th>
+                            <th>Evento</th>
+                            <th>Grupo</th>
                             <th>Estado</th>
+                            <th>Fecha envío</th>
+                            <th>Fecha respuesta</th>
+                            <th>Cantidad</th>
+                            <th>Cantidad confirmada</th>
+                            <th>Cantidad rechazada</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($invitaciones as $invitacione)
                             <tr>
 
-                                <td>{{ $invitacione->id }}</td>
-                                <td>{{ $invitacione->grupo->nombres }}</td>
-                                <td>{{ $invitacione->grupo->apellidos }}</td>
-                                <td>{{ $invitacione->grupo->telefono }}</td>
-                                <td>{{ $invitacione->personale->user->email }}</td>
-                                <td>{{ date('d/m/Y', strtotime($invitacione->fecha)) }}</td>
-                                <td>{{ $invitacione->programa->nombre }}</td>
-                                <td>{{ $invitacione->role->name }}</td>
+                                <td>{{ $invitacione->codigo }}</td>
+                                <td>{{ $invitacione->evento->name }}</td>
+                                <td>{{ $invitacione->grupo->name }}</td>
                                 <td>
                                     @switch($invitacione->estado)
                                         @case(0)
@@ -66,6 +63,11 @@
                                         @default
                                     @endswitch
                                 </td>
+                                <td>{{ date('d/m/Y', strtotime($invitacione->fecha_enviada)) }}</td>
+                                <td>{{ date('d/m/Y', strtotime($invitacione->fecha_respuesta)) }}</td>
+                                <td>{{ $invitacione->cantidad }}</td>
+                                <td>{{ $invitacione->cantidad_confirmada }}</td>
+                                <td>{{ $invitacione->cantidad_rechazada }}</td>
                                 <td width="10px">
                                     <a href="{{ route('admin.invitaciones.show', $invitacione) }}"
                                         class="btn btn-primary">Ver</a>

@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('invitados', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('apellidos');
-            $table->string('telefono');
-            $table->string('dni');
-            $table->string('correo');
-            $table->tinyInteger('tipo');
+            $table->string('nombre')->nullable();
+            $table->string('apellidos')->nullable();
+            $table->string('telefono')->nullable();
+            $table->string('dni')->nullable();
+            $table->string('correo')->nullable();
+            $table->string('conjunto')->nullable();
+            $table->string('subconjunto')->nullable();
+            $table->tinyInteger('tipo')->nullable();
             $table->tinyInteger('por');
             $table->foreignId('grupo_id')->constrained();
             $table->timestamps();

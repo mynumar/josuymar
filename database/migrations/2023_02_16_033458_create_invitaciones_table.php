@@ -17,12 +17,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('evento_id')->constrained();
             $table->foreignId('grupo_id')->constrained();
-            $table->tinyInteger('estado');
-            $table->datetime('fecha_enviada');
-            $table->datetime('fecha_respuesta');
-            $table->tinyInteger('cantidad');
-            $table->tinyInteger('cantidad_confirmada');
-            $table->tinyInteger('cantidad_rechazada');
+            $table->tinyInteger('estado')->default(0);
+            $table->datetime('fecha_enviada')->nullable();
+            $table->datetime('fecha_respuesta')->nullable();
+            $table->tinyInteger('cantidad')->default(0);
+            $table->tinyInteger('cantidad_confirmada')->default(0);
+            $table->tinyInteger('cantidad_rechazada')->default(0);
             $table->string('codigo');
             $table->timestamps();
         });
