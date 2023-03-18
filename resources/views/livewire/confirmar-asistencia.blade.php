@@ -22,9 +22,9 @@
             @foreach ($invitacione->grupo->invitados as $invitado)
                 <div>
                     {{-- <input type="hidden" wire:model="invitados.{{ $loop->index+1 }}.id" wire:loading.attr='disabled' wire:target='guardar'> --}}
-                    <input type="checkbox" wire:model="invitados.{{ $loop->index+1 }}.confirmed" wire:loading.attr='disabled' wire:target='guardar'>
+                    <input type="checkbox" wire:model.defer="invitados.{{ $loop->index+1 }}.confirmed" wire:loading.attr='disabled' wire:target='guardar'>
                     <input type="text" class="form-control w-72 form-control-sm disabled:opacity-5" placeholder="Nombre y Apellido"
-                        wire:model="invitados.{{ $loop->index+1 }}.nombre" wire:loading.attr='disabled' wire:target='guardar'>
+                        wire:model.defer="invitados.{{ $loop->index+1 }}.nombre" wire:loading.attr='disabled' wire:target='guardar'>
                     <x-jet-input-error class="text-sm" for="invitados.{{ $loop->index+1 }}.nombre" />
                     <x-jet-input-error class="text-sm" for="invitados.{{ $loop->index+1 }}.confirmed" />
                 </div>
@@ -40,9 +40,9 @@
                 falta: {{ $falta }}
                 @for ($i = 0; $i < $falta; $i++)
                     <div class="mt-2">
-                        <input type="checkbox" wire:model="newinvitados.{{ $i }}.confirmed" wire:loading.attr='disabled' wire:target='guardar'>
+                        <input type="checkbox" wire:model.defer="newinvitados.{{ $i }}.confirmed" wire:loading.attr='disabled' wire:target='guardar'>
                         <input type="text" class="form-control w-72 form-control-sm disabled:opacity-5" placeholder="Nombre y Apellido"
-                            wire:model="newinvitados.{{ $i }}.nombre" wire:loading.attr='disabled' wire:target='guardar'>
+                            wire:model.defer="newinvitados.{{ $i }}.nombre" wire:loading.attr='disabled' wire:target='guardar'>
                         <x-jet-input-error class="text-sm" for="newinvitados.{{ $i }}.nombre"  style="color:red"/>
                         <x-jet-input-error class="text-sm" for="newinvitados.{{ $i }}.confirmed"  style="color:red"/>
                     </div>
