@@ -18,4 +18,8 @@ class Invitacione extends Model
     public function evento(){
         return $this->belongsTo(Evento::class);
     }
+
+    public function confirmaciones(){
+        return $this->hasMany(Confirmacione::class);
+    }
 }

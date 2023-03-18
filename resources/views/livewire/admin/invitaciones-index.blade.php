@@ -63,8 +63,16 @@
                                         @default
                                     @endswitch
                                 </td>
-                                <td>{{ date('d/m/Y', strtotime($invitacione->fecha_enviada)) }}</td>
-                                <td>{{ date('d/m/Y', strtotime($invitacione->fecha_respuesta)) }}</td>
+                                <td>
+                                    @empty(!$invitacione->fecha_enviada)        
+                                    {{ date('d/m/Y', strtotime($invitacione->fecha_enviada)) }}
+                                    @endempty
+                                </td>
+                                <td>
+                                    @empty(!$invitacione->fecha_respuesta)        
+                                    {{ date('d/m/Y', strtotime($invitacione->fecha_respuesta)) }}
+                                    @endempty
+                                </td>
                                 <td>{{ $invitacione->cantidad }}</td>
                                 <td>{{ $invitacione->cantidad_confirmada }}</td>
                                 <td>{{ $invitacione->cantidad_rechazada }}</td>

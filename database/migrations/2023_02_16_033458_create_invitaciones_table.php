@@ -23,7 +23,7 @@ return new class extends Migration
             $table->tinyInteger('cantidad')->default(0);
             $table->tinyInteger('cantidad_confirmada')->default(0);
             $table->tinyInteger('cantidad_rechazada')->default(0);
-            $table->string('codigo');
+            $table->string('codigo')->unique();
             $table->timestamps();
         });
     }

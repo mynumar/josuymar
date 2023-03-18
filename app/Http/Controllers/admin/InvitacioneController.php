@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Imports\GruposImport;
+use App\Imports\InvitacionesImport;
 use App\Imports\InvitadosImport;
 use App\Models\Invitacione;
 use Illuminate\Http\Request;
@@ -50,7 +52,8 @@ class InvitacioneController extends Controller
      */
     public function show(Invitacione $invitacione)
     {
-        //
+        dd($invitacione->grupo->invitados);
+        return view('admin.invitaciones.show', compact('invitacione'));
     }
 
     /**
@@ -97,6 +100,18 @@ class InvitacioneController extends Controller
         $tipo = $request->tipo;
 
         try {
+            Excel::import(new GruposImport(), $file);
+
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $failures = $e->failures();
+            //dd($failures);
+
+            $exception = ValidationException::withMessages(collect($failures)->map->toArray()->all());
+            throw $exception;
+        }
+
+
+        try {
             Excel::import(new InvitadosImport(), $file);
 
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
@@ -106,6 +121,19 @@ class InvitacioneController extends Controller
             $exception = ValidationException::withMessages(collect($failures)->map->toArray()->all());
             throw $exception;
         }
+
+        
+        try {
+            Excel::import(new InvitacionesImport(), $file);
+
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $failures = $e->failures();
+            //dd($failures);
+
+            $exception = ValidationException::withMessages(collect($failures)->map->toArray()->all());
+            throw $exception;
+        }
+
 
         return redirect()->route('admin.invitaciones.index')->with('info', 'Se cargó los invitados correctamente');
     }

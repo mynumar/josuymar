@@ -12,6 +12,7 @@ class InvitacionesIndex extends Component
 	protected $paginationTheme = 'bootstrap';
 
     public $readyToLoad;
+    public $search;
 
     public function loadinvitaciones(){
 		$this->readyToLoad = true;
@@ -20,7 +21,10 @@ class InvitacionesIndex extends Component
 
     public function render()
     {
-        $invitaciones = Invitacione::paginate();
+        $that = $this;
+        $invitaciones = Invitacione::whereHas('grupo', function($q) use ($that){
+            $q->where('name','like', '%'.$that->search.'%');
+        })->paginate();
 
         return view('livewire.admin.invitaciones-index', compact('invitaciones'));
     }

@@ -20,9 +20,9 @@
     <!-- Styles -->
     @livewireStyles
     <!-- Animate.css -->
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
     @if (!isset($tailwind))
         
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/icomoon.css">
     <!-- Bootstrap  -->
@@ -35,13 +35,12 @@
     <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
     @else
-        <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
-        <link rel="stylesheet" href="{{ config('app.url') }}/css/mystyles.css">
-
+    
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/style.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/mystyles.css">
 
     <!-- Modernizr JS -->
     <script src="{{ config('app.url') }}/js/modernizr-2.6.2.min.js"></script>

@@ -3,21 +3,48 @@
 @section('title', 'Invitaciones')
 
 @section('content_header')
-<button type="button" class="btn text-success" data-toggle="modal" data-target="#importInvitados">
-    <i class="fas fa-cloud-upload-alt"></i>
-</button>
+    <button type="button" class="btn text-success" data-toggle="modal" data-target="#importInvitados">
+        <i class="fas fa-cloud-upload-alt"></i>
+    </button>
     <h1>Invitaciones</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+
+    @if (session('info'))
+        <div class="alert alert-success">
+            {{ session('info') }}
+        </div>
+    @endif
+    @if (count($errors->getMessages()) > 0)
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <strong>Errores de validación:</strong>
+            <ul>
+                @foreach ($errors->getMessages() as $errorMessages)
+                    @foreach ($errorMessages as $errorMessage)
+                        <li>
+                            {{ $errorMessage }}
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        </li>
+                    @endforeach
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
     @livewire('admin.invitaciones-index')
 
     <div class="modal fade" id="importInvitados" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
-                <form action="{{ route('admin.invitaciones.importInvitaciones') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('admin.invitaciones.importInvitaciones') }}" method="post"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
                         <h5 class="modal-title" id="">Importar invitados</h5>
@@ -74,17 +101,19 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        console.log('Hi!');
+    </script>
     $().ready(function() {
-        @if (session('eliminar') == 'Ok')
-            Swal.fire(
-                      "Ok",
-                      'Matrícula eliminada.',
-                      'success'
-                    )
-        @endif
-        Livewire.on('readytoload', event => {
-            {{-- $('.eliminar-inscripcione').submit( function (e) {
+    @if (session('eliminar') == 'Ok')
+        Swal.fire(
+        "Ok",
+        'Matrícula eliminada.',
+        'success'
+        )
+    @endif
+    Livewire.on('readytoload', event => {
+    {{-- $('.eliminar-inscripcione').submit( function (e) {
                 e.preventDefault();
                 Swal.fire({
                   title: 'Se necesita confirmación',
@@ -101,7 +130,7 @@
                   }
                 })	    		
             }); --}}
-        });
+    });
 
     });
 @stop
