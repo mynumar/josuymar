@@ -7,13 +7,13 @@
             <a href="#" target="_blank">josuymar</a>
         </h2>
     </x-slot>
-    <div id="fh5co-couple-story">
+    <div id="">
         <div class="container m-auto">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <span>Nosotros Nos Amamos</span>
+                    <span>ERES ESPECIAL</span>
                     <h2>Te invitamos</h2>
-                    <p>Nos encantará hacerte parte de nuestra historia</p>
+                    <p class="mb-4">Nos encantará hacerte parte de nuestra historia</p>
                     @livewire('confirmar-asistencia')
                 </div>
             </div>

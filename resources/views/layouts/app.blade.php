@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" type="image/x-icon" href="{{config('app.url')}}/images/corazon2.png">
 
     <title>{{ config('app.name', 'Josu&Mar') }}</title>
 
@@ -21,12 +22,12 @@
     @livewireStyles
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
-    @if (!isset($tailwind))
-        
-    <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/icomoon.css">
-    <!-- Bootstrap  -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/bootstrap.css">
+    @if (!isset($tailwind))
+    
+    <!-- Icomoon Icon Fonts-->
+    <!-- Bootstrap  -->
 
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/magnific-popup.css">
@@ -35,7 +36,8 @@
     <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
     @else
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+        <link rel="stylesheet" href="{{ config('app.url') }}/css/output.css">
     @endif
     
     <!-- Theme style  -->
