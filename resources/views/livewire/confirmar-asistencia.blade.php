@@ -58,7 +58,10 @@
                 </div>
             @else
             <div>
-                No alegrará verte ese día
+                Nos alegrará verte ese día
+                <br>
+                Esta invitación ya fue confirmada. Si ya no podrás asistir o si no confirmaste y deseas asistir escríbenos.
+                <br>
                 <div class="mt-8">
                     <button wire:click="" class="btn btn-sm btn-jym text-white">Enviar mis palabras a los novios</button>
                 </div>

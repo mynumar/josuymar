@@ -42,7 +42,6 @@
                     <tbody>
                         @foreach ($invitaciones as $invitacione)
                             <tr>
-
                                 <td>{{ $invitacione->codigo }}</td>
                                 <td>{{ $invitacione->evento->name }}</td>
                                 <td>{{ $invitacione->grupo->name }}</td>
@@ -78,7 +77,10 @@
                                 <td>{{ $invitacione->cantidad_rechazada }}</td>
                                 <td width="10px">
                                     <a href="{{ route('admin.invitaciones.show', $invitacione) }}"
-                                        class="btn btn-primary">Ver</a>
+                                        class="btn btn-sm btn-primary">Ver</a>
+                                </td>
+                                <td width="10px">
+                                    <a href="{{route('admin.invitaciones.edit', $invitacione)}}" class="btn btn-sm btn-primary">Edit</a>
                                 </td>
                                 @can('admin.invitaciones.destroy')
                                     <td width="10px">

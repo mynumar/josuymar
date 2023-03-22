@@ -64,7 +64,7 @@ class InvitacioneController extends Controller
      */
     public function edit(Invitacione $invitacione)
     {
-        //
+        return view('admin.invitaciones.edit', compact('invitacione'));
     }
 
     /**
@@ -76,7 +76,9 @@ class InvitacioneController extends Controller
      */
     public function update(Request $request, Invitacione $invitacione)
     {
-        //
+        $invitacione->update($request->all());
+
+        return redirect()->route('admin.invitaciones.edit', $invitacione)->with('info', 'Se editó correctamente');
     }
 
     /**

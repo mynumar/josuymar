@@ -20,4 +20,10 @@
         </div>
     </div>
 
+    <style>
+        input["type=checkbox"]{
+            width: 15px;
+            height: 15px;
+        }
+    </style>
 </x-app-layout>
