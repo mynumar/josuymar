@@ -17,6 +17,7 @@ class EventoSeeder extends Seeder
     {
         Evento::create([
             'name' => 'Matrimonio Civil',
+            'estado' => '0',
             'fecha_inicio' => '2023-05-18 14:00:00',
             'fecha_fin' => '2023-05-18 15:00:00',
             'ubicacion' => 'https://goo.gl/maps/F3sR6NkMQQrjuDGa7',
@@ -26,6 +27,7 @@ class EventoSeeder extends Seeder
 
         Evento::create([
             'name' => 'Sellamiento',
+            'estado' => '1',
             'fecha_inicio' => '2023-05-19 14:00:00',
             'fecha_fin' => '2023-05-19 15:00:00',
             'ubicacion' => 'https://goo.gl/maps/PtXNw8mgDxDDPfY47',
@@ -35,6 +37,7 @@ class EventoSeeder extends Seeder
 
         Evento::create([
             'name' => 'Fieta de bodas',
+            'estado' => '1',
             'fecha_inicio' => '2023-05-19 20:00:00',
             'fecha_fin' => '2023-05-20 01:00:00',
             'ubicacion' => 'https://goo.gl/maps/mNT85VYQZaCc86jAA',

@@ -6,14 +6,128 @@
     <h1>Dashboard</h1>
 @stop
 
+@section('plugins.Chartjs', true)
+
 @section('content')
     <p>Welcome to this beautiful admin panel.</p>
+
+    <div class="row">
+        <div class=""></div>
+        <div class="col-6"><canvas id="invitaciones"></canvas></div>
+        <div class="col-12">
+            <canvas id="invitados"></canvas>
+        </div>
+    </div>
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script>
+        /* invitaciones */
+        var enviados = {{ $invitaciones['enviados'] }};
+        var confirmados = {{ $invitaciones['confirmados'] }};
+
+        $(function() {
+            const data_invitaciones = {
+                labels: [
+                    'Enviado: ' + enviados,
+                    'Confirmado: ' + confirmados,
+                ],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [enviados, confirmados],
+                    backgroundColor: [
+                        '#4bc0c0',
+                        'rgb(255, 205, 86)',
+                    ],
+                    hoverOffset: 4
+                }]
+            };
+
+            const config_invitaciones = {
+                type: 'doughnut',
+                data: data_invitaciones,
+            };
+
+            const ctx2 = document.getElementById('invitaciones');
+            const chart_rtemplo = new Chart(ctx2, config_invitaciones)
+        })
+        /* fin invitaciones */
+
+        /* invitados por evento */
+
+
+
+        const labels = {!! json_encode($eventos) !!};
+        const confirmaciones = {!! json_encode($confirmaciones) !!};
+        const rechazados = {!! json_encode($rechazados) !!};
+        const sincontestar = {!! json_encode($sincontestar) !!};
+
+
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Confirmados',
+                    data: confirmaciones,
+                    borderColor: '#4bc0c0',
+                    backgroundColor: '#4bc0c0',
+                    borderWidth: 2,
+                    borderRadius: 100,
+                    borderSkipped: false,
+                },
+                {
+                    label: 'Rechazados',
+                    data: rechazados,
+                    borderColor: '#4bc0c0',
+                    backgroundColor: '#41a4ff',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    borderSkipped: true,
+                },
+                {
+                    label: 'Sin responder',
+                    data: sincontestar,
+                    borderColor: '#4bc0c0',
+                    backgroundColor: '#4bc0c0',
+                    borderWidth: 2,
+                    borderRadius: 5,
+                    borderSkipped: false,
+                },
+            ]
+        };
+
+        const config_invitados = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Invitados'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+
+        const ctx3 = document.getElementById('invitados');
+        const chart_rtemplo = new Chart(ctx3, config_invitados)
+
+
+
+
+        /* fin invitados por evento */
+    </script>
 @stop

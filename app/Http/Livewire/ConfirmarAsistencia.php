@@ -91,13 +91,14 @@ class ConfirmarAsistencia extends Component
                     ]);
 
                     $this->invitacione->update(['estado' => '2']);
-
                 } else {
                     // dd('Este invitado ya confirmó para ese evento');
                 }
             } else {
             }
         }
+        $this->reset(['newinvitados', 'invitados']);
+        return;
     }
 
 
