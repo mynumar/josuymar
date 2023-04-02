@@ -7,3 +7,14 @@
     color: #E4717A;
     font-family: "Sacramento", Arial, serif;
 }
+
+.input-confirmar-nombre{
+    width: 20px;
+    height: 20px;
+    margin-bottom: 11px !important;
+}
+
+.foto-padres{
+    border-radius: 20px;
+    border: 3px solid #e4717a;
+}

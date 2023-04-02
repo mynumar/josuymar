@@ -29,25 +29,24 @@ class HomeController extends Controller
 
         $eventos_ids = Evento::pluck('id');
         $confirmaciones = [];
-        $rechazados = [];
+        $anulados = [];
         $sincontestar = [];
 
         $i = 0;
         foreach ($eventos_ids as $id) {
             array_push($confirmaciones, Confirmacione::whereHas('invitacione', function ($q) use ($id) {
-                $q->where('evento_id',$id);
+                $q->where('evento_id', $id);
             })->count());
 
-            array_push($rechazados, Invitacione::whereIn('estado', [1,2])->sum('cantidad'));
+            array_push($anulados, Invitacione::where('evento_id', $id)->whereIn('estado', [3])->sum('cantidad'));
             
-            array_push($sincontestar, Invitacione::select('cantidad')->sum('cantidad'));
+            array_push($sincontestar, Invitacione::select('cantidad')->where('evento_id', $id)->whereIn('estado', [1])->sum('cantidad'));
             
-
             $i++;
         }
         
 
 
-        return view('admin.index', compact('invitaciones', 'eventos', 'confirmaciones', 'rechazados', 'sincontestar'));
+        return view('admin.index', compact('invitaciones', 'eventos', 'confirmaciones', 'anulados', 'sincontestar'));
     }
 }

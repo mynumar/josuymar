@@ -14,7 +14,7 @@
     <div class="row">
         <div class=""></div>
         <div class="col-6"><canvas id="invitaciones"></canvas></div>
-        <div class="col-12">
+        <div class="col-6">
             <canvas id="invitados"></canvas>
         </div>
     </div>
@@ -63,7 +63,7 @@
 
         const labels = {!! json_encode($eventos) !!};
         const confirmaciones = {!! json_encode($confirmaciones) !!};
-        const rechazados = {!! json_encode($rechazados) !!};
+        const anulados = {!! json_encode($anulados) !!};
         const sincontestar = {!! json_encode($sincontestar) !!};
 
 
@@ -76,17 +76,17 @@
                     borderColor: '#4bc0c0',
                     backgroundColor: '#4bc0c0',
                     borderWidth: 2,
-                    borderRadius: 100,
+                    borderRadius: 15,
                     borderSkipped: false,
                 },
                 {
-                    label: 'Rechazados',
-                    data: rechazados,
+                    label: 'Anulados',
+                    data: anulados,
                     borderColor: '#4bc0c0',
                     backgroundColor: '#41a4ff',
                     borderWidth: 2,
-                    borderRadius: 5,
-                    borderSkipped: true,
+                    borderRadius: 15,
+                    borderSkipped: false,
                 },
                 {
                     label: 'Sin responder',
@@ -94,7 +94,7 @@
                     borderColor: '#4bc0c0',
                     backgroundColor: '#4bc0c0',
                     borderWidth: 2,
-                    borderRadius: 5,
+                    borderRadius: 15,
                     borderSkipped: false,
                 },
             ]

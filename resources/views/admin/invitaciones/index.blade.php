@@ -104,33 +104,5 @@
     <script>
         console.log('Hi!');
     </script>
-    $().ready(function() {
-    @if (session('eliminar') == 'Ok')
-        Swal.fire(
-        "Ok",
-        'Matrícula eliminada.',
-        'success'
-        )
-    @endif
-    Livewire.on('readytoload', event => {
-    {{-- $('.eliminar-inscripcione').submit( function (e) {
-                e.preventDefault();
-                Swal.fire({
-                  title: 'Se necesita confirmación',
-                  text: "No se podrá recuperar los datos de la inscrición.",
-                  icon: 'warning',
-                  showCancelButton: true,
-                  confirmButtonColor: '#3085d6',
-                  cancelButtonColor: '#d33',
-                  confirmButtonText: 'Sí, borrar difinitivamente!'
-                }).then((result) => {
-                  if (result.value) {
-                    /**/
-                    this.submit();
-                  }
-                })	    		
-            }); --}}
-    });
 
-    });
 @stop

@@ -323,7 +323,7 @@
   }
   .fh5co-cover .display-t,
   .fh5co-cover .display-tc {
-    height: 900px;
+    height: 780px;
     display: table;
     width: 100%;
   }
@@ -1000,7 +1000,7 @@
   #fh5co-couple,
   #fh5co-gallery,
   .fh5co-section {
-    padding: 7em 0;
+    padding: 3em 0;
     clear: both;
   }
   @media screen and (max-width: 768px) {
@@ -1068,7 +1068,7 @@
   .couple-half h3 {
     font-family: "Sacramento", Arial, serif;
     color: #E4717A;
-    font-size: 30px;
+    font-size: 38px;
   }
   .couple-half .groom, .couple-half .bride {
     float: left;
@@ -1842,4 +1842,21 @@
   }
   
   /*# sourceMappingURL=style.css.map */
+  
+
+  @media screen and (max-width: 768px) {
+    .simply-countdown > .simply-section {
+      width: 70px;
+      height: 70px;
+    }
+    .simply-countdown > .simply-section > div {
+      height: 70px;
+      width: 70px;
+    }
+    .simply-countdown > .simply-section .simply-amount {
+      font-size: 25px;
+      line-height: 1.1;
+    }
+    
+  }
   

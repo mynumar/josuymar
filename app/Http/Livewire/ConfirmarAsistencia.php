@@ -65,6 +65,11 @@ class ConfirmarAsistencia extends Component
             }
         }
 
+        if (count($this->invitados) > $this->invitacione->cantidad) {
+            $this->msg = 'Debe seleccionar solo '. $this->invitacione->cantidad . ' persona(s).';
+            return;
+        }
+
         foreach ($this->invitados as $invitado) {
             if (!empty($invitado['confirmed'])) {
                 $invi = Invitado::find(empty($invitado['id']) ? 0 : $invitado['id']);

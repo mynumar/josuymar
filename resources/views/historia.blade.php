@@ -10,9 +10,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <span>Nosotros Nos Amamos</span>
+                    <span>Te contamos</span>
                     <h2>Nuestra Historia</h2>
-                    <p>Nos encantará hacerte parte de nuestra historia</p>
+                    <p>Los momentos son las moléculas de la eternidad</p>
+                    {{-- <p>Nos encantará hacerte parte de nuestra historia</p> --}}
                 </div>
             </div>
             <div class="row">
@@ -20,11 +21,11 @@
                     <ul class="timeline animate-box">
                         <li class="animate-box">
                             <div class="timeline-badge"
-                                style="background-image:url({{ config('app.url') }}/images/couple-1.jpg);"></div>
+                                style="background-image:url({{ config('app.url') }}/images/1733850.jpg);"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h3 class="timeline-title">La primera vez que nos vimos</h3>
-                                    <span class="date">Abril 03, 2023</span>
+                                    <h3 class="timeline-title">Nuestro primer encuentro</h3>
+                                    <span class="date">Marzo 29, 2022</span>
                                 </div>
                                 <div class="timeline-body">
                                     <p>
@@ -42,11 +43,11 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">Primera Cita</h3>
-                                    <span class="date">Mayo 09, 2023</span>
+                                    <span class="date">Mayo 09, 2022</span>
                                 </div>
                                 <div class="timeline-body">
                                     <p>
-                                        Nuestra primera cita fue en el cine, vimos una película de Marvel. Era la
+                                        Nuestra primera cita como amigos fue en el cine, vimos una película de Marvel. Era la
                                         primera vez que ella veía este tipo de película. Fue una buena excusa para
                                         tratarnos en persona y alimentar nuestra amistad.
                                     </p>
@@ -59,7 +60,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">En una relación</h3>
-                                    <span class="date">Julio 31, 2023</span>
+                                    <span class="date">Julio 31, 2022</span>
                                 </div>
                                 <div class="timeline-body">
                                     <p>
@@ -78,7 +79,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">Nuestro compromiso</h3>
-                                    <span class="date">Diciembre 08, 2023</span>
+                                    <span class="date">Diciembre 08, 2022</span>
                                 </div>
                                 <div class="timeline-body">
                                     <p>

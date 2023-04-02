@@ -3,23 +3,30 @@
         <div class="card-header">
             <input wire:model="search" class="form-control" placeholder="Ingrese el nombre o apellido de un personale">
             <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_habilitado" type="checkbox" id="estado_habilitado">
-                <label class="form-check-label" for="estado_habilitado">
+                <input class="form-check-input" wire:model="estado_noenviado" type="checkbox" id="estado_noenviado">
+                <label class="form-check-label" for="estado_noenviado">
+                    Ver noenviado
+                </label>
+            </div>
+            <div class="form-check mt-2 d-inline">
+                <input class="form-check-input" wire:model="estado_enviado" type="checkbox" id="estado_enviado">
+                <label class="form-check-label" for="estado_enviado">
+                    Ver enviados
+                </label>
+            </div>
+            <div class="form-check mt-2 d-inline">
+                <input class="form-check-input" wire:model="estado_confirmado" type="checkbox" id="estado_confirmado">
+                <label class="form-check-label" for="estado_confirmado">
                     Ver confirmados
                 </label>
             </div>
             <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_retirado" type="checkbox" id="estado_retirado">
-                <label class="form-check-label" for="estado_retirado">
-                    Ver rechazados
+                <input class="form-check-input" wire:model="estado_anulado" type="checkbox" id="estado_anulado">
+                <label class="form-check-label" for="estado_anulado">
+                    Ver anulados
                 </label>
             </div>
-            <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_suspendido" type="checkbox" id="estado_suspendido">
-                <label class="form-check-label" for="estado_suspendido">
-                    Ver suspendidos
-                </label>
-            </div>
+            
         </div>
         @if ($invitaciones->count())
             <div class="card-body">
@@ -99,7 +106,17 @@
                 </table>
             </div>
             <div class="card-footer">
-                {{ $invitaciones->links() }}
+                <div class="form-row">
+                    @if ($invitaciones != [])
+                        <div class="col">
+                            {{ $invitaciones->links() }}
+                        </div>
+                        <div class="col">
+                            Viendo <b> {{ count($invitaciones) }}</b> de un total de <b>
+                                {{ $invitaciones->total() }}</b>
+                        </div>
+                    @endif
+                </div>
             </div>
         @else
             <div class="card-body">

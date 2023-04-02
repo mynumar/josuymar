@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h1>Deseos</h1>
-        <h2>Un espacio para los expresar su amor</a>
+        <h2>Un espacio para expresar su amor</a>
         </h2>
     </x-slot>
 
@@ -17,7 +17,7 @@
                 <div class="couple-wrap text-center animate-box fadeInUp animated-fast">
                     <div class="couple-half col-md-4 col-sm-6">
                         <div class="thumbnail" style="border: none;">
-                            <img src="{{ config('app.url') }}/images/D_1_PD.jpg" alt="..." style="max-width: 50%;">
+                            <img class="foto-padres" src="{{ config('app.url') }}/images/D_1_PD.jpg" alt="..." style="max-width: 50%;">
                             <div class="testimony-slide" style="padding: 9px; padding-top: 4rem;">
                                 <h3 class="text-center">David y Patricia Vitate</h3>
                                 <p>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="couple-half col-md-4 col-sm-6 ">
                         <div class="thumbnail" style="border: none;">
-                            <img src="{{ config('app.url') }}/images/D_2_SD.jpg" alt="..."
+                            <img class="foto-padres" src="{{ config('app.url') }}/images/D_2_SD.jpg" alt="..."
                                 style="max-width: 50%;
                                         ">
                             <div class="testimony-slide" style="padding: 9px;padding-top: 4rem;">

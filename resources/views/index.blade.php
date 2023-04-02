@@ -11,8 +11,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                     <h2>¡Hola!</h2>
-                    <h3>19 de Mayo, 2023 Lima, Perú</h3>
-                    <p>Te invitamos a celebrar nuestra boda</p>
+                    {{-- <h3>19 de Mayo, 2023 Lima, Perú</h3>
+                    <p>Te invitamos a celebrar nuestra boda</p> --}}
                 </div>
             </div>
             <div class="couple-wrap animate-box">
