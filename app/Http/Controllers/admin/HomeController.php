@@ -22,6 +22,7 @@ class HomeController extends Controller
 
         $invitaciones_enviados = Invitacione::where('estado', 1)->count();
         $invitaciones_confirmados = Invitacione::where('estado', 2)->count();
+        dd($invitaciones_enviados);
 
         $eventos = Evento::
             //where('estado', '1')->
