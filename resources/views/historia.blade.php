@@ -87,6 +87,7 @@
                                         principal y cada día nos esforzámos por llegar a alcanzarla. Aunque ya
                                         habíamos hablado del tema, Josué quería que la pedida quedara con un
                                         recuerdo más que hermoso.
+                                        <a href="https://www.facebook.com/MarjorieYnuma/videos/5696743903752565/" target="_blank">Ver video</a>
                                     </p>
                                 </div>
                             </div>
