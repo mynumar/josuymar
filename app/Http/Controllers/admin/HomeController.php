@@ -20,8 +20,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $invitaciones['enviados'] = Invitacione::where('estado', 1)->count();
-        $invitaciones['confirmados'] = Invitacione::where('estado', 2)->count();
+        $invitaciones_enviados = Invitacione::where('estado', 1)->count();
+        $invitaciones_confirmados = Invitacione::where('estado', 2)->count();
 
         $eventos = Evento::
             //where('estado', '1')->
@@ -47,6 +47,6 @@ class HomeController extends Controller
         
 
 
-        return view('admin.index', compact('invitaciones', 'eventos', 'confirmaciones', 'anulados', 'sincontestar'));
+        return view('admin.index', compact('invitaciones_enviados', 'invitaciones_confirmados', 'eventos', 'confirmaciones', 'anulados', 'sincontestar'));
     }
 }
