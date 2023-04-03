@@ -65,7 +65,7 @@
                                 <div class="timeline-body">
                                     <p>
                                         Josué siempre es el detallista de la relación y para pedirme que sea su
-                                        novia no fue la excepción. De regreso en una viaje, me trajo de recuerdo un
+                                        novia no fue la excepción. De regreso de un paseo, me trajo de recuerdo un
                                         llavero que llevaba escrito la pregunta que cambiaría nuestro futuro:
                                         ¿Quieres
                                         ser mi novia?
