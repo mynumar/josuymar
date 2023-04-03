@@ -31,7 +31,7 @@ class ConfirmarAsistencia extends Component
     public function buscar()
     {
 
-        $this->reset(['newinvitados', 'invitados']);
+        $this->reset(['newinvitados', 'invitados', 'invitacione', 'mostrar']);
         $that = $this;
         $this->msg = '';
 
