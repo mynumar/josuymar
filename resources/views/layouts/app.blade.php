@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="author" content="PFJ 2022">
+    <meta name="description" content="{{ config('app.description', 'Josu&Mar' ) }}">
+    <meta property="og:image" content="{{ config('app.url', 'http://localhost/').'/images/logo-cuadrado.jpg' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{config('app.url')}}/images/corazon2.png">

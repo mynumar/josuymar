@@ -55,6 +55,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'description' => 'Nos casamos.! Confirma tu asistencia. Conoces nuestra historia y escribe tus deseos hacia nosotros. ',
 
     'asset_url' => env('APP_URL'),
 
