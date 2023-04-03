@@ -17,7 +17,7 @@ class EventoSeeder extends Seeder
     {
         Evento::create([
             'name' => 'Matrimonio Civil',
-            'estado' => '0',
+            'estado' => '1',
             'fecha_inicio' => '2023-05-18 14:00:00',
             'fecha_fin' => '2023-05-18 15:00:00',
             'ubicacion' => 'https://goo.gl/maps/F3sR6NkMQQrjuDGa7',

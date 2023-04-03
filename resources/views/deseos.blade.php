@@ -104,7 +104,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
@@ -124,9 +124,9 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
@@ -148,7 +148,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="col-12">
                                 <div class="media event-wrap animate-box"
@@ -172,7 +172,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
@@ -194,9 +194,9 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
@@ -217,9 +217,9 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-left">
@@ -241,9 +241,9 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
                                     style="border: none;-webkit-border-radius: unset;border-radius: unset;">
                                     <div class="media-body">
@@ -263,7 +263,7 @@
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>
@@ -292,9 +292,7 @@
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
-                                            <p>"Far far away, behind the word mountains, far from the countries
-                                                Vokalia and Consonantia, there live the blind texts. Separated they
-                                                live in Bookmarksgrove right at the coast of the Semantics"</p>
+                                            <p>"Mándanos tus palabras para publicarlas"</p>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -305,9 +303,7 @@
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
-                                            <p>"Far far away, behind the word mountains, far from the countries
-                                                Vokalia and Consonantia, at the coast of the Semantics, a large
-                                                language ocean."</p>
+                                            <p>"Mándanos tus palabras para publicarlas"</p>
                                         </blockquote>
                                     </div>
                                 </div>
@@ -318,9 +314,7 @@
                                         </figure>
                                         <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
                                         <blockquote>
-                                            <p>"Far far away, far from the countries Vokalia and Consonantia, there
-                                                live the blind texts. Separated they live in Bookmarksgrove right at
-                                                the coast of the Semantics, a large language ocean."</p>
+                                            <p>"Mándanos tus palabras para publicarlas"</p>
                                         </blockquote>
                                     </div>
                                 </div>

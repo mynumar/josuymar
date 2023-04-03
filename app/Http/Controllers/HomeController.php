@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Evento;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,8 +14,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
-        return view('index');
+        $eventos = Evento::where('estado', 1)->get();
+        
+        return view('index', compact('eventos'));
     }
 
     /**

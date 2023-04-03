@@ -10,15 +10,15 @@
                     <li><a href="{{ route('historia.index') }}">Historia</a></li>
                     <li class="has-dropdown">
                         <a href="{{ route('deseos.index') }}">Deseos</a>
-                        <ul class="dropdown">
+                        {{-- <ul class="dropdown">
                             <li><a href="#">Padres</a></li>
                             <li><a href="#">Testigos</a></li>
                             <li><a href="#">Damitas</a></li>
                             <li><a href="#">Pajes</a></li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li class="has-dropdown">
-                        <a href="gallery.html">Galería</a>
+                        {{-- <a href="gallery.html">Galería</a> --}}
                         <ul class="dropdown">
                             <li><a href="#">Pedida</a></li>
                         </ul>

@@ -54,26 +54,37 @@
                 <div class="display-t">
                     <div class="display-tc">
                         <div class="col-md-10 col-md-offset-1">
-                            <div class="col-md-4 col-sm-4 text-center">
-                                <div class="event-wrap animate-box">
-                                    <h3>Ceremonia Civil</h3>
-                                    <div class="event-col">
-                                        <i class="icon-clock"></i>
-                                        <span>3:00 PM</span>
-                                        <span>4:00 PM</span>
+                            @foreach ($eventos as $evento)
+                                <div class="col-md-4 col-sm-4 text-center">
+                                    <div class="event-wrap animate-box">
+                                        <h3>{{$evento->name}}</h3>
+                                        <div class="event-col">
+                                            <i class="icon-clock"></i>
+                                            <span>{{date('h:i A', strtotime($evento->fecha_inicio))}}</span>
+                                            {{-- <span>{{date('h:i A', strtotime($evento->fecha_fin))}}</span> --}}
+                                        </div>
+                                        <div class="event-col">
+                                            <i class="icon-calendar"></i>
+                                            <span>{{date('l d', strtotime($evento->fecha_inicio))}}</span>
+                                            <span>{{date('M, Y', strtotime($evento->fecha_inicio))}}</span>
+                                            {{-- <span>Jueves 18</span> --}}
+                                            {{-- <span>Mayo, 2023</span> --}}
+                                        </div>
+                                        <p>
+                                            {{-- CEREMONIA PRIVADA<br> --}}
+                                            <br>{{$evento->name_lugar}}<br>
+                                        </p>
+                                        <p>
+                                            <a href="{{$evento->ubicacion}}" target="_blank" class="text-white" style="color:white">
+                                            <i class="icon-location-pin"></i>
+                                                {{$evento->direccion}}
+                                            </a>
+                                        </p>
+                                        <p></p>
                                     </div>
-                                    <div class="event-col">
-                                        <i class="icon-calendar"></i>
-                                        <span>Jueves 18</span>
-                                        <span>Mayo, 2023</span>
-                                    </div>
-                                    <p>CEREMONIA PRIVADA<br><br>Palacio de la Cultura<br></p>
-                                    <p><i class="icon-location-pin"></i>Av. San Lorenzo 426b, Puente Piedra 15121
-                                    </p>
-                                    <p></p>
                                 </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 text-center">
+                            @endforeach
+                            {{-- <div class="col-md-4 col-sm-4 text-center">
                                 <div class="event-wrap animate-box">
                                     <h3>Sellamiento</h3>
                                     <div class="event-col">
@@ -104,10 +115,10 @@
                                         <span>Viernes 19</span>
                                         <span>Mayo, 2023</span>
                                     </div>
-                                    <p>CAREMONIA CENTRAL<br><br>También transmitido en facebook</p>
+                                    <p>CEREMONIA CENTRAL<br><br>También transmitido en facebook</p>
                                     <p><i class="icon-location-pin"></i>Carabayllo, Lima, Perú<br></p>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
