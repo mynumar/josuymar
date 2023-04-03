@@ -27,8 +27,8 @@
 @section('js')
     <script>
         /* invitaciones */
-        var enviados = {{ $invitaciones['enviados'] }};
-        var confirmados = {{ $invitaciones['confirmados'] }};
+        var enviados = {!! $invitaciones['enviados'] !!};
+        var confirmados = {!! $invitaciones['confirmados'] !!};
 
         $(function() {
             const data_invitaciones = {

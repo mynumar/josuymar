@@ -61,7 +61,7 @@
                                         <div class="event-col">
                                             <i class="icon-clock"></i>
                                             <span>{{date('h:i A', strtotime($evento->fecha_inicio))}}</span>
-                                            {{-- <span>{{date('h:i A', strtotime($evento->fecha_fin))}}</span> --}}
+                                            <span>{{date('h:i A', strtotime($evento->fecha_fin))}}</span>
                                         </div>
                                         <div class="event-col">
                                             <i class="icon-calendar"></i>
@@ -70,8 +70,7 @@
                                             {{-- <span>Jueves 18</span> --}}
                                             {{-- <span>Mayo, 2023</span> --}}
                                         </div>
-                                        <p>
-                                            {{-- CEREMONIA PRIVADA<br> --}}
+                                        <p>                                            
                                             <br>{{$evento->name_lugar}}<br>
                                         </p>
                                         <p>
