@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="PFJ 2022">
-    <meta name="description" content="{{ config('app.description', 'Josu&Mar' ) }}">
+    <meta name="author" content="Josué y Marjorie">
+    <meta name="title" content="josuymar">
+    <meta name="keywords" content="josuymar, nos casamos, matrimonio, josue, marjorie, boda">
+    <meta name="description" content="{{ config('app.description', 'JosuyMar' ) }}">
     <meta property="og:image" content="{{ config('app.url', 'http://localhost/').'/images/logo-cuadrado.jpg' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">

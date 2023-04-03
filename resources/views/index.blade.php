@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1>Josué &amp; Marjorie</h1>
+        <h1>Josué & Marjorie</h1>
         <h2>Nos casamos en</h2>
         <div class="simply-countdown simply-countdown-one"></div>
         <p><a href="{{route('confirmar-asistencia')}}" class="btn btn-default btn-sm">Confirmar mi asistencia</a></p>
@@ -55,8 +55,8 @@
                     <div class="display-tc">
                         <div class="col-md-10 col-md-offset-1">
                             @foreach ($eventos as $evento)
-                                <div class="col-md-4 col-sm-4 text-center">
-                                    <div class="event-wrap animate-box">
+                                <div class="col-md-4 col-sm-4 text-center" >
+                                    <div class="event-wrap animate-box" style="min-height: 390px">
                                         <h3>{{$evento->name}}</h3>
                                         <div class="event-col">
                                             <i class="icon-clock"></i>
@@ -71,7 +71,9 @@
                                             {{-- <span>Mayo, 2023</span> --}}
                                         </div>
                                         <p>                                            
-                                            <br>{{$evento->name_lugar}}<br>
+                                            <br>
+                                                <b>{{$evento->name_lugar}}</b>
+                                            <br>
                                         </p>
                                         <p>
                                             <a href="{{$evento->ubicacion}}" target="_blank" class="text-white" style="color:white">

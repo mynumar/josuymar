@@ -4,13 +4,24 @@
         <input type="text" class="text-3xl my-2 " wire:model="codigo" wire:keydown.enter="buscar" placeholder="Código">
     </div>
     <div class="mt-8">
-        <button wire:click="buscar" wire:keydown.enter="buscar" class="btn btn-sm btn-jym text-white text-3xl">Buscar</button>
+        <button wire:click="buscar" wire:keydown.enter="buscar" class="btn btn-sm btn-jym text-white text-3xl">
+            <b>    Buscar</b>
+        </button>
     </div>
     <div>
         @if (!empty($invitacione))
-            <div class="">
+            <div class="mb-6">
                 <h3 class="mt-2">Estas invitado a</h3>
-                <h3 class="font-sacramento text-8xl leading-tight">{{ $invitacione->evento->name }}</h3>
+                <h3 class="font-sacramento text-8xl leading-tight m-0">{{ $invitacione->evento->name }}</h3>
+                <div class="event-col">
+                    <i class="icon-calendar"></i>
+                    <span>{{date('l d', strtotime($invitacione->evento->fecha_inicio))}}</span>
+                    <span>{{date('M, Y', strtotime($invitacione->evento->fecha_inicio))}}</span>
+                </div>
+                <div class="event-col">
+                    <i class="icon-clock"></i>
+                    <span>{{date('h:i A', strtotime($invitacione->evento->fecha_inicio))}}</span>
+                </div>
             </div>
             <div>
                 Tu invitación es para
@@ -58,7 +69,10 @@
                 </div>
             @else
             <div>
+                <br>
                 Nos alegrará verte ese día
+                <br>
+                <h3 class="font-sacramento text-8xl leading-tight m-0">Te esperamos.!</h3>
                 <br>
                 <div class="mt-8">
                     <a href="{{route('deseos.index')}}" class="btn btn-sm btn-jym text-white">Enviar mis palabras a los novios</a>
@@ -66,12 +80,17 @@
                 <br>
                 <div>
                     <b>Nota:</b>
-                    Esta invitación ya fue confirmada. Si ya no podrás asistir o si no confirmaste y deseas asistir escríbenos.
+                    Esta invitación ya fue confirmada. Si deseas modificarla, comunícate con nosotros.
                 </div>
                 <br>
             </div>
             @endif
         @else
+        {{-- <div class="mt-4">
+            <b>Fecha límite para confirmar:</b>
+            <br>
+            <b>Abril 30, 2023</b>
+        </div> --}}
         @endif
         <div class="mt-4">
             <b>{{ $msg }}</b>

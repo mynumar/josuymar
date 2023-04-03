@@ -36,7 +36,7 @@ class EventoSeeder extends Seeder
         ]);
 
         Evento::create([
-            'name' => 'Fieta de bodas',
+            'name' => 'Fiesta de bodas',
             'estado' => '1',
             'fecha_inicio' => '2023-05-19 20:00:00',
             'fecha_fin' => '2023-05-20 01:00:00',
