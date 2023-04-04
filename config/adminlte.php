@@ -316,7 +316,11 @@ return [
             'route'         => 'admin.invitaciones.index',
             'icon'        => 'far fa-envelope-open',
         ],
-        ['header' => 'account_settings'],
+        [
+            'text'        => 'Confirmaciones',
+            'route'         => 'admin.confirmaciones.index',
+            'icon'        => 'far fa-envelope-open',
+        ],
         // [
             // 'label_color' => 'success',
             // 'label'       => 4,

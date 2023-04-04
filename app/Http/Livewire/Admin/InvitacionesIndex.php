@@ -36,7 +36,7 @@ class InvitacionesIndex extends Component
 
         $invitaciones = Invitacione::whereIn('estado', $states)->whereHas('grupo', function($q) use ($that){
             $q->where('name','like', '%'.$that->search.'%');
-        })->paginate();
+        })->paginate('50');
 
         $this->resetPage();
 
