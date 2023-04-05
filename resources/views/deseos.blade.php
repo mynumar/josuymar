@@ -1,8 +1,13 @@
 <x-app-layout>
     <x-slot name="header">
         <h1>Deseos</h1>
-        <h2>Un espacio para expresar su amor</a>
+        <h2>Un espacio para expresar su amor
         </h2>
+        <p>
+            <a href="#enviar-deseos" class="btn-jym-w font-work-sans">Enviar mis deseos</a>
+        </p>
+    </x-slot>
+    <x-slot name="tailwind">
     </x-slot>
 
     <div id="fh5co-couple">
@@ -17,7 +22,8 @@
                 <div class="couple-wrap text-center animate-box fadeInUp animated-fast">
                     <div class="couple-half col-md-4 col-sm-6">
                         <div class="thumbnail" style="border: none;">
-                            <img class="foto-padres" src="{{ config('app.url') }}/images/D_1_PD.jpg" alt="..." style="max-width: 50%;">
+                            <img class="foto-padres" src="{{ config('app.url') }}/images/D_1_PD.jpg" alt="..."
+                                style="max-width: 50%;">
                             <div class="testimony-slide" style="padding: 9px; padding-top: 4rem;">
                                 <h3 class="text-center">David y Patricia Vitate</h3>
                                 <p>
@@ -285,17 +291,19 @@
                     <div class="col-md-12 animate-box">
                         <div class="wrap-testimony">
                             <div class="owl-carousel-fullwidth">
-                                <div class="item">
-                                    <div class="testimony-slide active text-center">
-                                        <figure>
-                                            <img src="{{ config('app.url') }}/images/couple-1.jpg" alt="user">
-                                        </figure>
-                                        <span>John Doe, via <a href="#" class="twitter">Twitter</a></span>
-                                        <blockquote>
-                                            <p>"Mándanos tus palabras para publicarlas"</p>
-                                        </blockquote>
+                                @foreach ($deseos as $deseo)
+                                    <div class="item">
+                                        <div class="testimony-slide active text-center">
+                                            <figure>
+                                                <img src="{{ config('app.url') }}/images/couple-1.jpg" alt="user">
+                                            </figure>
+                                            <span>{{$deseo->nombre}}</span>
+                                            <blockquote>
+                                                <p>{{$deseo->deseos}}</p>
+                                            </blockquote>
+                                        </div>
                                     </div>
-                                </div>
+                                @endforeach
                                 <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
@@ -307,7 +315,7 @@
                                         </blockquote>
                                     </div>
                                 </div>
-                                <div class="item">
+                                {{-- <div class="item">
                                     <div class="testimony-slide active text-center">
                                         <figure>
                                             <img src="{{ config('app.url') }}/images/couple-3.jpg" alt="user">
@@ -317,7 +325,7 @@
                                             <p>"Mándanos tus palabras para publicarlas"</p>
                                         </blockquote>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -325,6 +333,9 @@
             </div>
         </div>
     </div>
+
+    @livewire('enviar-deseos')
+
 
 
 </x-app-layout>

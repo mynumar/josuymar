@@ -321,6 +321,11 @@ return [
             'route'         => 'admin.confirmaciones.index',
             'icon'        => 'far fa-envelope-open',
         ],
+        [
+            'text'        => 'Deseos',
+            'route'         => 'admin.deseos.index',
+            'icon'        => 'far fa-envelope-open',
+        ],
         // [
             // 'label_color' => 'success',
             // 'label'       => 4,
@@ -475,8 +480,9 @@ return [
             'files' => [
                 [
                     'type' => 'js',
-                    'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'asset' => true,
+                    'location' => '/vendor/sweetalert2/sweetalert2.all.min.js',
+                    // 'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
                 ],
             ],
         ],

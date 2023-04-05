@@ -23,12 +23,11 @@
     {{-- <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
-    <!-- Styles -->
-    @livewireStyles
     <!-- Animate.css -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/icomoon.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/bootstrap.css">
+    
     @if (!isset($tailwind))
     
     <!-- Icomoon Icon Fonts-->
@@ -37,14 +36,14 @@
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/magnific-popup.css">
 
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
+ 
     @else
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <link rel="stylesheet" href="{{ config('app.url') }}/css/output.css">
     @endif
-    
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/style.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/mystyles.css">
@@ -52,6 +51,9 @@
     <!-- Modernizr JS -->
     <script src="{{ config('app.url') }}/js/modernizr-2.6.2.min.js"></script>
      <!-- Scripts -->
+     
+    <!-- Styles -->
+    @livewireStyles
 </head>
 
 <body class="font-sans antialiased">

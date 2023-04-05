@@ -2,10 +2,39 @@
     background-color: #E4717A;
 }
 
+.btn-jym-w{
+    background-color: white;
+    color: #E4717A;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+.btn-jym-w:hover{
+    background-color: #E4717A;
+    color: white;
+}
+.btn-jym-r{
+    background-color: #E4717A;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+.btn-jym-r:hover{
+    background-color: white;
+    color: #E4717A;
+}
+.rosado-jym{
+    color: #E4717A!important;
+}
 .font-sacramento{
     font-weight: bold;
     color: #E4717A;
     font-family: "Sacramento", Arial, serif;
+}
+
+.font-work-sans{
+    font-family: "Work Sans", Arial, sans-serif;
 }
 
 .input-confirmar-nombre{
@@ -17,4 +46,11 @@
 .foto-padres{
     border-radius: 20px;
     border: 3px solid #e4717a;
+}
+.text-plomo{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.4);
 }

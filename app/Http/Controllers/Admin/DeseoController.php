@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Deseo;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,7 @@ class DeseoController extends Controller
      */
     public function index()
     {
-        $deseos = Deseo::where('estado', '1')->get();
-        return view('deseos', compact('deseos'));
+        return view('admin.deseos.index');
     }
 
     /**
@@ -42,10 +42,10 @@ class DeseoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Deseo  $deseo
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Deseo $deseo)
     {
         //
     }
@@ -53,10 +53,10 @@ class DeseoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Deseo  $deseo
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Deseo $deseo)
     {
         //
     }
@@ -65,10 +65,10 @@ class DeseoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Deseo  $deseo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Deseo $deseo)
     {
         //
     }
@@ -76,10 +76,10 @@ class DeseoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Deseo  $deseo
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Deseo $deseo)
     {
         //
     }

@@ -60,7 +60,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h3 class="timeline-title">En una relación</h3>
-                                    <span class="date">Julio 31, 2022</span>
+                                    <span class="date">Julio 30, 2022</span>
                                 </div>
                                 <div class="timeline-body">
                                     <p>
