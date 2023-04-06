@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="{{ config('app.url') }}/css/animate.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/icomoon.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/bootstrap.css">
-    
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
     @if (!isset($tailwind))
     
     <!-- Icomoon Icon Fonts-->
@@ -41,9 +43,7 @@
         {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
         <link rel="stylesheet" href="{{ config('app.url') }}/css/output.css">
     @endif
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{{ config('app.url') }}/css/owl.theme.default.min.css">
+ 
     <!-- Theme style  -->
     <link rel="stylesheet" href="{{ config('app.url') }}/css/style.css">
     <link rel="stylesheet" href="{{ config('app.url') }}/css/mystyles.css">
