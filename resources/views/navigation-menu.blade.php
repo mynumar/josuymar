@@ -8,6 +8,7 @@
                 <ul>
                     <li class="active"><a href="{{ route('index') }}">Inicio</a></li>
                     <li><a href="{{ route('historia.index') }}">Historia</a></li>
+                    <li><a href="{{ route('regalos') }}">Regalos</a></li>
                     <li class="has-dropdown">
                         <a href="{{ route('deseos.index') }}">Deseos</a>
                         {{-- <ul class="dropdown">

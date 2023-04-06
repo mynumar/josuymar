@@ -35,6 +35,8 @@ class EnviarDeseos extends Component
 
         $this->msg = 'Gracias por tus bellas palabras.';
 
+        return redirect()->route('deseos.index');
+
     }
 
     public function render()

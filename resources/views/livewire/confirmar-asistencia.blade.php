@@ -75,7 +75,10 @@
                 <h3 class="font-sacramento text-8xl leading-tight m-0">Te esperamos.!</h3>
                 <br>
                 <div class="mt-8">
-                    <a href="{{route('deseos.index')}}" class="btn btn-sm btn-jym text-white">Enviar mis palabras a los novios</a>
+                    <a href="{{route('deseos.index')}}#enviar-deseos" class="btn btn-sm btn-jym text-white">Enviar mis palabras a los novios</a>
+                </div>
+                <div class="mt-8">
+                    <a href="{{route('regalos')}}" class="btn btn-sm btn-jym text-white">Enviar un regalo</a>
                 </div>
                 <br>
                 <div>

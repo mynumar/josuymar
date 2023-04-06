@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/confirmar-asistencia', [HomeController::class, 'confirmarAsistencia'])->name('confirmar-asistencia');
+Route::get('/regalos', [HomeController::class, 'regalos'])->name('regalos');
 
 Route::resource('historia', HistoriaController::class)->names('historia');
 Route::resource('deseos', DeseoController::class)->names('deseos');

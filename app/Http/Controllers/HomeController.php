@@ -29,6 +29,13 @@ class HomeController extends Controller
         return view('confirmar-asistencia');
     }
 
+    public function regalos()
+    {
+        
+
+        return view('regalos');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

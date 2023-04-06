@@ -23,6 +23,7 @@
 .btn-jym-r:hover{
     background-color: white;
     color: #E4717A;
+    border:#E4717A solid 1px
 }
 .rosado-jym{
     color: #E4717A!important;
@@ -53,4 +54,10 @@
     letter-spacing: 2px;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.4);
+}
+
+.icon-regalos{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
 }

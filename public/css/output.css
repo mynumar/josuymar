@@ -1341,6 +1341,10 @@ select {
   margin-top: 0.5rem;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -1511,6 +1515,10 @@ select {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .max-w-screen-xl {
@@ -2007,6 +2015,11 @@ select {
   line-height: 2.5rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
@@ -2035,6 +2048,10 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-black {
+  font-weight: 900;
 }
 
 .font-medium {
