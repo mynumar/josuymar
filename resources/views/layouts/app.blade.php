@@ -121,9 +121,6 @@
     @stack('modals')
 
     @livewireScripts
-
-
-
     <!-- jQuery -->
     <script src="{{ config('app.url') }}/js/jquery.min.js"></script>
     <!-- jQuery Easing -->
