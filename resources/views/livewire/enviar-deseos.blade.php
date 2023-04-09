@@ -24,8 +24,12 @@
                     </div>
                     <div class="form-group">
                         <input type="button" wire:click="enviar" value="Enviar mis deseos" class="btn-jym-r">
-                        <div class="text-green-600">
-                            {{$msg}}
+                        <div class="rosado-jym mt-6">
+                            <b>
+                                <i>
+                                    {{$msg}}
+                                </i>
+                            </b>
                         </div>
                     </div>
                 </div>

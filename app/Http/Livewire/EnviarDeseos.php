@@ -33,9 +33,9 @@ class EnviarDeseos extends Component
             'estado' => 0
         ]);
 
-        $this->msg = 'Gracias por tus bellas palabras.';
+        $this->msg = 'Gracias por tus bellas palabras. En cuanto los novios las reciban se publicarán aquí arriba.';
 
-        return redirect()->route('deseos.index');
+        // return redirect()->route('deseos.index');
 
     }
 
