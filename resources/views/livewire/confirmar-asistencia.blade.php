@@ -5,7 +5,7 @@
     </div>
     <div class="mt-8">
         <button wire:click="buscar" wire:keydown.enter="buscar" class="btn btn-sm btn-jym text-white text-3xl">
-            <b>    Buscar</b>
+            Buscar
         </button>
     </div>
     <div>

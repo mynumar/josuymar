@@ -1,6 +1,12 @@
 .btn-jym{
     background-color: #E4717A;
 }
+.btn-jym:hover{
+    background-color: white;
+    color: #E4717A;
+    border: solid 1px #E4717A;
+    font-weight: bold;
+}
 
 .btn-jym-w{
     background-color: white;
