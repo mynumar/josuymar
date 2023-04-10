@@ -37,7 +37,7 @@ class ConfirmarAsistencia extends Component
 
         $invitacione = Invitacione::where('codigo', $this->codigo)
             ->whereHas('grupo', function ($q) use ($that) {
-                $q->where('name', 'like', '%'.$that->apellido.'%');
+                $q->where('name', 'like', '%'.trim($that->apellido).'%');
             })
             ->first();
 
