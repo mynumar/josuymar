@@ -14,6 +14,13 @@
                 <h3 class="mt-2">Estas invitado a</h3>
                 <h3 class="font-sacramento text-8xl leading-tight m-0">{{ $invitacione->evento->name }}</h3>
                 <div class="event-col">
+                    <a href="{{$invitacione->evento->ubicacion}}" target="_blank" class="text-white jym-link">
+                        <i class="icon-location-pin"></i>
+                            {{$invitacione->evento->name_lugar}} - 
+                            {{$invitacione->evento->direccion}}
+                        </a>
+                </div>
+                <div class="event-col">
                     <i class="icon-calendar"></i>
                     <span>{{date('l d', strtotime($invitacione->evento->fecha_inicio))}}</span>
                     <span>{{date('M, Y', strtotime($invitacione->evento->fecha_inicio))}}</span>
