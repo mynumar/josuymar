@@ -19,11 +19,14 @@ class GruposIndex extends Component
 
     public function invitacioneEnviada($codigo){
         $invitacione = Invitacione::where('codigo', $codigo)->first();
-        $invitacione->update([
-            'estado' => 1
-        ]);
-
-        $this->emit('alert', 'La invitación se cambió a estado enviado.');
+        if ($invitacione->estado == 0) {
+            $invitacione->update([
+                'estado' => 1
+            ]);
+    
+            $this->emit('alert', 'La invitación se cambió a estado enviado.');
+        }
+        return;
     }
 
     public function invitar(Evento $evento, Grupo $grupo){

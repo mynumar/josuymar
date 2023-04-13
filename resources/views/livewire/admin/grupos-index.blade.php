@@ -59,7 +59,7 @@
                                     </button>
                                     @else
                                         {{-- <a href="{{$url_wap}}"><i class="fas fa-paper-plane"></i></a> --}}
-                                        <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{$grupo->name}}', '{{$invitacione->codigo}}')"><i class="far fa-copy"></i> Copiar y enviarx mensaje</button>
+                                        <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{$grupo->name}}', '{{$invitacione->codigo}}')" wire:key="{{$invitacione->codigo}}"><i class="far fa-copy"></i> Copiar y enviar mensaje</button>
                                     @endif
                                 </td>
                                 @endforeach
