@@ -326,6 +326,11 @@ return [
             'route'         => 'admin.deseos.index',
             'icon'        => 'far fa-envelope-open',
         ],
+        [
+            'text'        => 'Grupos',
+            'route'         => 'admin.grupos.index',
+            'icon'        => 'far fa-user',
+        ],
         // [
             // 'label_color' => 'success',
             // 'label'       => 4,

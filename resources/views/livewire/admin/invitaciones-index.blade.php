@@ -80,8 +80,14 @@
                                     @endempty
                                 </td>
                                 <td>{{ $invitacione->cantidad }}</td>
-                                <td>{{ $invitacione->cantidad_confirmada }}</td>
-                                <td>{{ $invitacione->cantidad_rechazada }}</td>
+                                <td>{{ $invitacione->confirmaciones->count() }}</td>
+                                <td>
+                                    @if ($invitacione->estado == 2)
+                                        {{ $invitacione->cantidad - $invitacione->confirmaciones->count() }}
+                                    @else
+                                        0
+                                    @endif
+                                </td>
                                 <td width="10px">
                                     <a href="{{ route('admin.invitaciones.show', $invitacione) }}"
                                         class="btn btn-sm btn-primary">Ver</a>

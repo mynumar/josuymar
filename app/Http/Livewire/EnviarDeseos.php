@@ -11,6 +11,7 @@ class EnviarDeseos extends Component
     public $nombre;
     public $deseos;
     public $msg;
+    public $deseoEnviado = false;
 
     protected $rules = [
         'nombre' => 'required',
@@ -34,7 +35,7 @@ class EnviarDeseos extends Component
         ]);
 
         $this->msg = 'Gracias por tus bellas palabras. En cuanto los novios las reciban se publicarán aquí arriba.';
-
+        $this->deseoEnviado = true;
         // return redirect()->route('deseos.index');
 
     }

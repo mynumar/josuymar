@@ -13,9 +13,19 @@
 
     <div class="row">
         <div class=""></div>
-        <div class="col-6"><canvas id="invitaciones"></canvas></div>
-        <div class="col-6">
-            <canvas id="invitados"></canvas>
+        <div class="col-md-6">
+            <div style="max-width: 500px">
+                <canvas id="invitaciones"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+                <canvas id="invitados" height="280"></canvas>
+        </div>
+        <div class="col-md-12">
+            <table>
+                <thead></thead>
+                <tbody></tbody>
+            </table>
         </div>
     </div>
 @stop

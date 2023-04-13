@@ -24,6 +24,7 @@
                     </div>
                     <div class="form-group">
                         <input type="button" wire:click="enviar" value="Enviar mis deseos" class="btn-jym-r">
+                        @if ($deseoEnviado)
                         <div class="rosado-jym mt-6">
                             <b>
                                 <i>
@@ -31,6 +32,12 @@
                                 </i>
                             </b>
                         </div>
+                        <div class="mt-8">
+                            <a href="{{route('regalos')}}" class="btn btn-sm btn-jym text-white">Enviar un regalo</a>
+                        </div>
+                        @else
+                            
+                        @endif
                     </div>
                 </div>
             </div>
