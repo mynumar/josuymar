@@ -84,7 +84,9 @@
                 `https://josuymar.lat/ \n` +
                 `Al hacer click en confirmar asistencia ingresa lo siguiente:\n` +
                 `*Apellido de familia:* ` + apellido + `\n` +
-                `*Codigo:* ` + codigo + `\n\n` +
+                `*Codigo:* ` + codigo + `\n` +
+                `y luego: *Confirmar* \n\n`+
+                `No olvides enviar tus palabras y los regalos claro 🤭\n`+
                 `Te esperamos.!`;
             // Select the text field
             // copyText.select();
