@@ -19,13 +19,53 @@
             </div>
         </div>
         <div class="col-md-6">
-                <canvas id="invitados" height="280"></canvas>
+            <canvas id="invitados" height="280"></canvas>
         </div>
+
         <div class="col-md-12">
-            <table>
-                <thead></thead>
-                <tbody></tbody>
-            </table>
+            <div class="card">
+                <div class="card-body">
+
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Por</th>
+                                <th>Cantidad</th>
+                                <th>F</th>
+                                <th>A</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Josué</td>
+                                <td>{{ \App\Models\Invitado::where('por', '1')->count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('por', '1')->where('tipo', '1')->count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('por', '1')->where('tipo', '2')->count() }}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Marjorie</td>
+                                <td>{{ \App\Models\Invitado::where('por', '0')->count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('por', '0')->where('tipo', '1')->count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('por', '0')->where('tipo', '2')->count() }}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>Total:</td>
+                                <td>{{ \App\Models\Invitado::count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('tipo', '1')->count() }}</td>
+                                <td>{{ \App\Models\Invitado::where('tipo', '2')->count() }}</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 @stop
@@ -79,8 +119,7 @@
 
         const data = {
             labels: labels,
-            datasets: [
-                {
+            datasets: [{
                     label: 'Confirmados',
                     data: confirmaciones,
                     borderColor: '#4bc0c0',
