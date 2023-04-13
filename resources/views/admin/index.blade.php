@@ -113,7 +113,7 @@
 
         const labels = {!! json_encode($eventos) !!};
         const confirmaciones = {!! json_encode($confirmaciones) !!};
-        const anulados = {!! json_encode($anulados) !!};
+        const rechazados = {!! json_encode($rechazados) !!};
         const sincontestar = {!! json_encode($sincontestar) !!};
 
 
@@ -129,8 +129,8 @@
                     borderSkipped: false,
                 },
                 {
-                    label: 'Anulados',
-                    data: anulados,
+                    label: 'Rechaados',
+                    data: rechazados,
                     borderColor: '#4bc0c0',
                     backgroundColor: '#41a4ff',
                     borderWidth: 2,
