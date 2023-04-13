@@ -129,7 +129,7 @@
                     borderSkipped: false,
                 },
                 {
-                    label: 'Rechaados',
+                    label: 'Rechazados',
                     data: rechazados,
                     borderColor: '#4bc0c0',
                     backgroundColor: '#41a4ff',
