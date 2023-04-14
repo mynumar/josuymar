@@ -2,7 +2,7 @@
     <div class="container m-auto">
         <div class="row">
             <div class="col-xs-2">
-                <div id="fh5co-logo"><a href="{{ config('app.fb') }}"><strong>Josu&Mar</strong></a></div>
+                <div id="fh5co-logo"><a href="{{ route('index') }}"><strong>Josu&Mar</strong></a></div>
                 <h1 style="display: none;">josuymar</h1>
             </div>
             <div class="col-xs-10 text-right menu-1">
@@ -10,7 +10,7 @@
                     <li class="active"><a href="{{ route('index') }}">Inicio</a></li>
                     <li><a href="{{ route('historia.index') }}">Historia</a></li>
                     <li><a href="{{ route('regalos') }}">Regalos</a></li>
-                    <li class="has-dropdown">
+                    <li class=" ">
                         <a href="{{ route('deseos.index') }}">Deseos</a>
                         {{-- <ul class="dropdown">
                             <li><a href="#">Padres</a></li>
@@ -19,12 +19,12 @@
                             <li><a href="#">Pajes</a></li>
                         </ul> --}}
                     </li>
-                    <li class="has-dropdown">
-                        {{-- <a href="gallery.html">Galería</a> --}}
+                    {{-- <li class="has-dropdown">
+                        <a href="gallery.html">Galería</a>
                         <ul class="dropdown">
                             <li><a href="#">Pedida</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     <li><a target="_blank" href="{{route('admin.index')}}">Ingresar</a></li>
                 </ul>
             </div>

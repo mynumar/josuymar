@@ -5,7 +5,7 @@
         <h1>Regalos</h1>
         <h2>
             Con esta boda no celebramos solo nuestro amor, sino la presencia de quienes hacen parte de nuestra vida. Gracias por estar acá.
-            <a href="#" target="_blank">josuymar</a>
+            <a href="{{ config('app.fb') }}" target="_blank">josuymar</a>
         </h2>
     </x-slot>
     <div id="">
