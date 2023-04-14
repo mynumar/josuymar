@@ -21,100 +21,141 @@
         <div class="col-md-6">
             <canvas id="invitados" height="280"></canvas>
         </div>
-
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body">
-
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th></th>
-                                <th colspan="3" class="text-center border-left">Enviado</th>
-                                <th colspan="3" class="text-center border-left">Confirmado</th>
-                            </tr>
-                            <tr>
-                                <th>Por</th>
-                                <th class="text-center border-left">F</th>
-                                <th class="text-center">A</th>
-                                <th class="text-center">Cantidad</th>
-                                <th class="text-center border-left">F</th>
-                                <th class="text-center">A</th>
-                                <th class="text-center">Cantidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @php
-                                $confirmados_familia_total = 0;
-                                $confirmados_amigos_total = 0;
-                            @endphp
-                            @foreach ([1, 0] as $item)
+        @foreach ($eventos as $evento)
+            <div class="col-md-12">
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h2>{{ $evento->name }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <td>
-                                        @switch($item)
-                                            @case(1)
-                                                Josué
-                                            @break
+                                    <th></th>
+                                    <th colspan="3" class="text-center border-left">Enviado</th>
+                                    <th colspan="3" class="text-center border-left">Confirmado</th>
+                                </tr>
+                                <tr>
+                                    <th>Por</th>
+                                    <th class="text-center border-left">F</th>
+                                    <th class="text-center">A</th>
+                                    <th class="text-center">Cantidad</th>
+                                    <th class="text-center border-left">F</th>
+                                    <th class="text-center">A</th>
+                                    <th class="text-center">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                    $confirmados_familia_total = 0;
+                                    $confirmados_amigos_total = 0;
+                                    $por_tipo_familia_total = 0;
+                                    $por_tipo_amigos_total = 0;
+                                @endphp
+                                @foreach ([1, 0] as $item)
+                                    <tr>
+                                        <td>
+                                            @switch($item)
+                                                @case(1)
+                                                    Josué
+                                                @break
 
-                                            @case(0)
-                                                Marjorie
-                                            @break
+                                                @case(0)
+                                                    Marjorie
+                                                @break
 
-                                            @default
-                                        @endswitch
-                                    </td>
-                                    <td class="text-center  border-left">
-                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '1')->count() }}
-                                    </td>
-                                    <td class="text-center">
-                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '2')->count() }}
-                                    </td>
-                                    <td class="text-center">
-                                        {{ \App\Models\Invitado::where('por', $item)->count() }}
-                                    </td>
-                                    <td class="text-center border-left">
-                                        @php
-                                            $confirmados_familia = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
-                                                $q->where('por', $item)->where('tipo', '1');
-                                            })->count();
-                                            $confirmados_familia_total = $confirmados_familia_total + $confirmados_familia;
-                                        @endphp
-                                        {{ $confirmados_familia }}
-                                    </td>
-                                    <td class="text-center">
-                                        @php
-                                            $confirmados_amigos = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
-                                                $q->where('por', $item)->where('tipo', '2');
-                                            })->count();
-                                            $confirmados_amigos_total = $confirmados_amigos_total + $confirmados_amigos;
-                                        @endphp
-                                        {{ $confirmados_amigos }}
-                                    </td>
-                                    <td class="text-center">
-                                        {{ $confirmados_familia + $confirmados_amigos }}
+                                                @default
+                                            @endswitch
+                                        </td>
+                                        {{-- total enviados --}}
+                                        <td class="text-center  border-left">
+                                            @php
+                                                $por_tipo_familia = \App\Models\Invitado::where('por', $item)
+                                                    ->where('tipo', '1')
+                                                    ->whereHas('grupo', function ($q) use ($evento) {
+                                                        $q->whereHas('invitaciones', function ($qu) use ($evento) {
+                                                            $qu->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                        });
+                                                    })
+                                                    ->count();
+                                                $por_tipo_familia_total = $por_tipo_familia_total + $por_tipo_familia;
+                                            @endphp
+                                            {{ $por_tipo_familia }}
+                                        </td>
+                                        <td class="text-center">
+                                            @php
+                                                $por_tipo_amigos = \App\Models\Invitado::where('por', $item)
+                                                    ->where('tipo', '2')
+                                                    ->whereHas('grupo', function ($q) use ($evento) {
+                                                        $q->whereHas('invitaciones', function ($qu) use ($evento) {
+                                                            $qu->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                        });
+                                                    })
+                                                    ->count();
+                                            @endphp
+                                            {{ $por_tipo_amigos }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ $por_tipo_familia + $por_tipo_amigos }}
+                                        </td>
+                                        {{-- confirmados --}}
+                                        <td class="text-center border-left">
+                                            @php
+                                                $confirmados_familia = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
+                                                    $q->where('por', $item)->where('tipo', '1');
+                                                })
+                                                    ->whereHas('invitacione', function ($q) use ($evento) {
+                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                    })
+                                                    ->count();
+                                                $confirmados_familia_total = $confirmados_familia_total + $confirmados_familia;
+                                            @endphp
+                                            {{ $confirmados_familia }}
+                                        </td>
+                                        <td class="text-center">
+                                            @php
+                                                $confirmados_amigos = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
+                                                    $q->where('por', $item)->where('tipo', '2');
+                                                })
+                                                    ->whereHas('invitacione', function ($q) use ($evento) {
+                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                    })
+                                                    ->count();
+                                                $confirmados_amigos_total = $confirmados_amigos_total + $confirmados_amigos;
+                                            @endphp
+                                            {{ $confirmados_amigos }}
+                                        </td>
+                                        <td class="text-center">
+                                            {{ $confirmados_familia + $confirmados_amigos }}
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                <tr class="table-info">
+                                    <td>Total:</td>
+                                    <td class="text-center border-left">{{ $por_tipo_familia_total }}</td>
+                                    <td class="text-center">{{ $por_tipo_amigos_total }}</td>
+                                    <td class="text-center">{{ $por_tipo_amigos_total + $por_tipo_familia_total }}</td>
+                                    <td class="text-center border-left">{{ $confirmados_familia_total }}</td>
+                                    <td class="text-center">{{ $confirmados_amigos_total }}</td>
+                                    <td class="text-center">{{ $confirmados_familia_total + $confirmados_amigos_total }}
                                     </td>
                                 </tr>
-                            @endforeach
-                            <tr class="table-info">
-                                <td>Total:</td>
-                                <td class="text-center border-left">{{ \App\Models\Invitado::where('tipo', '1')->count() }}
-                                </td>
-                                <td class="text-center">{{ \App\Models\Invitado::where('tipo', '2')->count() }}</td>
-                                <td class="text-center">{{ \App\Models\Invitado::count() }}</td>
-                                <td class="text-center border-left">{{ $confirmados_familia_total }}</td>
-                                <td class="text-center">{{ $confirmados_amigos_total }}</td>
-                                <td class="text-center">{{ $confirmados_familia_total + $confirmados_amigos_total }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
+        @endforeach
+
     </div>
 @stop
 
 @section('css')
-
+    <style>
+        .card-body {
+            overflow: auto
+        }
+    </style>
 @stop
 
 @section('js')
@@ -154,7 +195,7 @@
 
 
 
-        const labels = {!! json_encode($eventos) !!};
+        const labels = {!! json_encode($eventos->pluck('name')) !!};
         const confirmaciones = {!! json_encode($confirmaciones) !!};
         const rechazados = {!! json_encode($rechazados) !!};
         const sincontestar = {!! json_encode($sincontestar) !!};
