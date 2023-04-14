@@ -21,7 +21,8 @@ class GruposIndex extends Component
         $invitacione = Invitacione::where('codigo', $codigo)->first();
         if ($invitacione->estado == 0) {
             $invitacione->update([
-                'estado' => 1
+                'estado' => 1,
+                'fecha_enviada' => date('Y-m-d H:i:s')
             ]);
     
             $this->emit('alert', 'La invitación se cambió a estado enviado.');

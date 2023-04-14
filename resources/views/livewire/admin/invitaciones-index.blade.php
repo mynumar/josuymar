@@ -1,7 +1,19 @@
 <div wire:init="loadinvitaciones">
     <div class="card">
         <div class="card-header">
-            <input wire:model="search" class="form-control" placeholder="Ingrese el nombre o apellido de un personale">
+            <div class="form-row">
+                <div class="col">
+                    <input wire:model="search" class="form-control" placeholder="Ingrese el nombre o apellido de un personale">
+                </div>
+                <div class="col">
+                    <select name="evento" wire:model="evento" class="form-control" id="">
+                        <option value="">- Todos los eventos -</option>
+                        @foreach ($eventos as $evento)
+                            <option value="{{$evento->id}}">{{$evento->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
             <div class="form-check mt-2 d-inline">
                 <input class="form-check-input" wire:model="estado_noenviado" type="checkbox" id="estado_noenviado">
                 <label class="form-check-label" for="estado_noenviado">

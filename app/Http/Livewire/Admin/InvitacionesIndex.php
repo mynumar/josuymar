@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Evento;
 use App\Models\Invitacione;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -13,6 +14,8 @@ class InvitacionesIndex extends Component
 
     public $readyToLoad;
     public $search;
+    public $evento;
+    public $eventos;
     public $estado_noenviado = true;
     public $estado_enviado = true;
     public $estado_confirmado = true;
@@ -25,6 +28,10 @@ class InvitacionesIndex extends Component
 		$this->emit('readytoload');
 	}
 
+    public function mount(){
+        $this->eventos = Evento::where('estado','1')->get();
+    }
+
     public function render()
     {
         $that = $this;
@@ -36,7 +43,12 @@ class InvitacionesIndex extends Component
 
         $invitaciones = Invitacione::whereIn('estado', $states)->whereHas('grupo', function($q) use ($that){
             $q->where('name','like', '%'.$that->search.'%');
-        })->paginate('50');
+        });
+        if (!empty($this->evento)) {
+            $invitaciones = $invitaciones->where('evento_id', $this->evento);
+        }
+        
+        $invitaciones = $invitaciones->paginate('50');
 
         $this->resetPage();
 

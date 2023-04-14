@@ -19,7 +19,7 @@ class EnviarDeseos extends Component
     ];
 
     protected $messages = [
-        'nombre' => 'Queremos saber quien eres',
+        'nombre' => 'Queremos saber quién eres',
         'deseos' => 'Escribe lo que salga de tu corazón, puede ser poco o mucho.',
     ];
 
