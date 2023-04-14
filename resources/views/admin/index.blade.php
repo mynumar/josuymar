@@ -30,43 +30,75 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th></th>
-                                <th></th>
-                                <th colspan="2" class="text-center">Total</th>
-                                <th colspan="2" class="text-center">Confirmado</th>
+                                <th colspan="3" class="text-center border-left">Enviado</th>
+                                <th colspan="3" class="text-center border-left">Confirmado</th>
                             </tr>
                             <tr>
                                 <th>Por</th>
-                                <th>Cantidad</th>
-                                <th class="text-center">F</th>
+                                <th class="text-center border-left">F</th>
                                 <th class="text-center">A</th>
-                                <th class="text-center">F</th>
+                                <th class="text-center">Cantidad</th>
+                                <th class="text-center border-left">F</th>
                                 <th class="text-center">A</th>
+                                <th class="text-center">Cantidad</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Josué</td>
-                                <td>{{ \App\Models\Invitado::where('por', '1')->count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('por', '1')->where('tipo', '1')->count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('por', '1')->where('tipo', '2')->count() }}</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>Marjorie</td>
-                                <td>{{ \App\Models\Invitado::where('por', '0')->count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('por', '0')->where('tipo', '1')->count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('por', '0')->where('tipo', '2')->count() }}</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                            @php
+                                $confirmados_familia_total = 0;
+                                $confirmados_amigos_total = 0;
+                            @endphp
+                            @foreach ([1, 0] as $item)
+                                <tr>
+                                    <td>
+                                        @switch($item)
+                                            @case(1)
+                                                Josué
+                                            @break
+
+                                            @case(0)
+                                                Marjorie
+                                            @break
+
+                                            @default
+                                        @endswitch
+                                    </td>
+                                    <td class="text-center border-left">{{ \App\Models\Invitado::where('por', $item)->count() }}</td>
+                                    <td class="text-center">
+                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '1')->count() }}</td>
+                                    <td class="text-center">
+                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '2')->count() }}</td>
+                                    <td class="text-center border-left">
+                                        @php
+                                            $confirmados_familia = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
+                                                $q->where('por', $item)->where('tipo', '1');
+                                            })->count();
+                                            $confirmados_familia_total = $confirmados_familia_total + $confirmados_familia;
+                                        @endphp
+                                        {{ $confirmados_familia }}
+                                    </td>
+                                    <td class="text-center">
+                                        @php
+                                            $confirmados_amigos = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
+                                                $q->where('por', $item)->where('tipo', '2');
+                                            })->count();
+                                            $confirmados_amigos_total = $confirmados_amigos_total + $confirmados_amigos;
+                                        @endphp
+                                        {{ $confirmados_amigos }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $confirmados_familia + $confirmados_amigos}}
+                                    </td>
+                                </tr>
+                            @endforeach
                             <tr class="table-info">
                                 <td>Total:</td>
-                                <td>{{ \App\Models\Invitado::count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('tipo', '1')->count() }}</td>
-                                <td>{{ \App\Models\Invitado::where('tipo', '2')->count() }}</td>
-                                <td></td>
-                                <td></td>
+                                <td class="text-center border-left">{{ \App\Models\Invitado::count() }}</td>
+                                <td class="text-center">{{ \App\Models\Invitado::where('tipo', '1')->count() }}</td>
+                                <td class="text-center">{{ \App\Models\Invitado::where('tipo', '2')->count() }}</td>
+                                <td class="text-center border-left">{{ $confirmados_familia_total }}</td>
+                                <td class="text-center">{{ $confirmados_amigos_total }}</td>
+                                <td class="text-center">{{ $confirmados_familia_total + $confirmados_amigos_total }}</td>
                             </tr>
                         </tbody>
                     </table>
