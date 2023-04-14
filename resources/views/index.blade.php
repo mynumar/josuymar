@@ -76,7 +76,7 @@
                                             <br>
                                         </p>
                                         <p>
-                                            <a href="{{$evento->ubicacion}}" target="_blank" class="text-white" style="color:white">
+                                            <a href="{{$evento->ubicacion}}" target="_blank" class="text-white jym-link-white">
                                             <i class="icon-location-pin"></i>
                                                 {{$evento->direccion}}
                                             </a>

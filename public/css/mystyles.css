@@ -73,3 +73,9 @@
 .jym-link:hover{
     color: #e4717a;
 }
+.jym-link-white{
+    color: rgba(255, 255, 255, 1);
+}
+.jym-link-white:hover{
+    color: #e4717a;
+}
