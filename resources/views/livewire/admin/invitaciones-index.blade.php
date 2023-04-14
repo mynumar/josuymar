@@ -73,7 +73,9 @@
                                             {{ 'Enviado' }}
                                         @break
                                         @case(2)
+                                        <span class="text-success">
                                             {{ 'Confirmado' }}
+                                        </span>
                                         @break
                                         @case(3)
                                             {{ 'Anulado' }}

@@ -56,6 +56,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
     'description' => 'Nos casamos.! Confirma tu asistencia. Conoces nuestra historia y escribe tus deseos hacia nosotros. ',
+    'fb' => 'https://www.facebook.com/people/Josuymar/100091092627539/',
 
     'asset_url' => env('APP_URL'),
 

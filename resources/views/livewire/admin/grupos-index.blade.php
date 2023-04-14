@@ -26,7 +26,7 @@
                     Ver anulados
                 </label>
             </div> --}}
-            
+
         </div>
         @if ($grupos->count())
             <div class="card-body">
@@ -38,7 +38,7 @@
                             <th>Nombre</th>
                             <th>Personas</th>
                             @foreach ($eventos as $evento)
-                            <th>{{$evento->name}}</th>
+                                <th class="text-center">{{ $evento->name }}</th>
                             @endforeach
                         </tr>
                     </thead>
@@ -47,21 +47,46 @@
                             <tr>
                                 <td>{{ $grupo->id }}</td>
                                 <td>{{ $grupo->name }}</td>
-                                <td>{{$grupo->invitados->count()}}</td>
+                                <td>{{ $grupo->invitados->count() }}</td>
                                 @foreach ($eventos as $evento)
-                                <td class="text-center">
-                                    @php
-                                        $invitacione = \App\Models\Invitacione::where('evento_id', $evento->id)->where('grupo_id', $grupo->id)->first();
-                                    @endphp
-                                    @if (empty($evento->invitaciones->where('grupo_id', $grupo->id)->first()))
-                                    <button wire:click="invitar({{$evento->id}}, {{$grupo->id}})" class="btn btn-sm btn-success">
-                                        <i class="fas fa-user-plus"></i>
-                                    </button>
-                                    @else
-                                        {{-- <a href="{{$url_wap}}"><i class="fas fa-paper-plane"></i></a> --}}
-                                        <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{$grupo->name}}', '{{$invitacione->codigo}}')" wire:key="{{$invitacione->codigo}}"><i class="far fa-copy"></i> Copiar y enviar mensaje</button>
-                                    @endif
-                                </td>
+                                    <td class="text-center">
+                                        @php
+                                            $invitacione = \App\Models\Invitacione::where('evento_id', $evento->id)
+                                                ->where('grupo_id', $grupo->id)
+                                                ->first();
+                                        @endphp
+                                        @if (empty($evento->invitaciones->where('grupo_id', $grupo->id)->first()))
+                                            <button wire:click="invitar({{ $evento->id }}, {{ $grupo->id }})"
+                                                class="btn btn-sm btn-success">
+                                                <i class="fas fa-user-plus"></i>
+                                            </button>
+                                        @else
+                                            {{-- <a href="{{$url_wap}}"><i class="fas fa-paper-plane"></i></a> --}}
+                                            @switch($invitacione->estado)
+                                                @case(0)
+                                                    {{ 'No Enviado' }}
+                                                @break
+                                                @case(1)
+                                                    <b class="text-danger">
+                                                        {{ 'Enviado' }}
+                                                    </b>
+                                                @break
+                                                @case(2)
+                                                    <b class="text-success">
+                                                        {{ 'Confirmado' }}
+                                                    </b>
+                                                @break
+                                                @case(3)
+                                                    {{ 'Anulado' }}
+                                                @break
+                                                @default
+                                            @endswitch
+                                            <br>
+                                            <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{ $grupo->name }}', '{{ $invitacione->codigo }}')"
+                                                wire:key="{{ $invitacione->codigo }}"><i class="far fa-copy"></i>
+                                            </button>
+                                        @endif
+                                    </td>
                                 @endforeach
                                 <td>
 

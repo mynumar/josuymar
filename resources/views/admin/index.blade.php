@@ -29,12 +29,18 @@
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
+                                <th></th>
+                                <th></th>
+                                <th colspan="2" class="text-center">Total</th>
+                                <th colspan="2" class="text-center">Confirmado</th>
+                            </tr>
+                            <tr>
                                 <th>Por</th>
                                 <th>Cantidad</th>
-                                <th>F</th>
-                                <th>A</th>
-                                <th></th>
-                                <th></th>
+                                <th class="text-center">F</th>
+                                <th class="text-center">A</th>
+                                <th class="text-center">F</th>
+                                <th class="text-center">A</th>
                             </tr>
                         </thead>
                         <tbody>
