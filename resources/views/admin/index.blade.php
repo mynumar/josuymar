@@ -63,12 +63,15 @@
                                             @default
                                         @endswitch
                                     </td>
+                                    <td class="text-center  border-left">
+                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '1')->count() }}
+                                    </td>
                                     <td class="text-center">
-                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '1')->count() }}</td>
+                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '2')->count() }}
+                                    </td>
                                     <td class="text-center">
-                                        {{ \App\Models\Invitado::where('por', $item)->where('tipo', '2')->count() }}</td>
-                                    <td class="text-center border-left">
-                                        {{ \App\Models\Invitado::where('por', $item)->count() }}</td>
+                                        {{ \App\Models\Invitado::where('por', $item)->count() }}
+                                    </td>
                                     <td class="text-center border-left">
                                         @php
                                             $confirmados_familia = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
@@ -98,9 +101,9 @@
                                 </td>
                                 <td class="text-center">{{ \App\Models\Invitado::where('tipo', '2')->count() }}</td>
                                 <td class="text-center">{{ \App\Models\Invitado::count() }}</td>
-                                <td class="text-center border-left">{{ $confirmados_amigos_total }}</td>
+                                <td class="text-center border-left">{{ $confirmados_familia_total }}</td>
+                                <td class="text-center">{{ $confirmados_amigos_total }}</td>
                                 <td class="text-center">{{ $confirmados_familia_total + $confirmados_amigos_total }}</td>
-                                <td class="text-center">{{ $confirmados_familia_total }}</td>
                             </tr>
                         </tbody>
                     </table>
