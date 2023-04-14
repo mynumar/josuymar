@@ -65,6 +65,9 @@
             top: 250px;
             right: 5px;
         }
+        .card-body {
+            overflow: auto
+        }
     </style>
 @stop
 

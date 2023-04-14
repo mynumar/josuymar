@@ -45,6 +45,11 @@
 @section('css')
     <link rel="stylesheet" href="">
     <style>
+         .card-body {
+            overflow: auto
+        }
+    </style>
+    <style>
         /*\
         |*| ========================================================================
         |*| Bootstrap Toggle: bootstrap4-toggle.css v3.6.1

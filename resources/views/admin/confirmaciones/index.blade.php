@@ -43,7 +43,11 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="">
+    <style>
+        .card-body {
+            overflow: auto
+        }
+    </style>
 @stop
 
 @section('js')
