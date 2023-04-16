@@ -79,12 +79,12 @@
 
         })
 
-        function copiarInvitacione(apellido, codigo) {
+        function copiarInvitacione(apellido, codigo, evento) {
             // Get the text field
             //var copyText = document.getElementById("myInput");
             var copyText = `Hola.! 🤗 Somos Marjorie & Josué\n` +
-                `¡Nos casamos y queremos celebrarlo contigo! Hemos preparado un espacio para confirmar tu asistencia a nuestra boda, donde también podrás explorar sus secciones. Anímate a dejarnos tus deseos, será especial leerlos.\n` +
-                `https://josuymar.lat/ \n` +
+                `¡Nos casamos y queremos celebrarlo contigo! Hemos preparado un espacio para confirmar tu asistencia a nuestro(a) `+ evento +`, donde también podrás conocer de nosotros. Anímate a dejarnos tus deseos, será especial leerlos.\n` +
+                `Click en -> *https://josuymar.lat/* \n` +
                 `Al hacer click en confirmar asistencia ingresa lo siguiente:\n` +
                 `*Apellido de familia:* ` + apellido + `\n` +
                 `*Codigo:* ` + codigo + `\n` +

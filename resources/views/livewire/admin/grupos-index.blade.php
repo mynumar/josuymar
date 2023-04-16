@@ -82,7 +82,7 @@
                                                 @default
                                             @endswitch
                                             <br>
-                                            <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{ $grupo->name }}', '{{ $invitacione->codigo }}')"
+                                            <button class="btn btn-sm btn-outline-primary" onclick="copiarInvitacione('{{ $grupo->name }}', '{{ $invitacione->codigo }}', '{{ $invitacione->evento->name }}')"
                                                 wire:key="{{ $invitacione->codigo }}"><i class="far fa-copy"></i>
                                             </button>
                                         @endif
