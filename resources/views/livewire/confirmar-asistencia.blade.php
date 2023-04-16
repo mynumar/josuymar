@@ -11,6 +11,7 @@
     <div>
         @if (!empty($invitacione))
             <div class="mb-6">
+                {{$invitacione->estado}}
                 <h3 class="mt-2">Estas invitado a</h3>
                 <h3 class="font-sacramento text-8xl leading-tight m-0">{{ $invitacione->evento->name }}</h3>
                 <div class="event-col">

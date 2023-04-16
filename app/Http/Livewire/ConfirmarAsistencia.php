@@ -95,13 +95,15 @@ class ConfirmarAsistencia extends Component
                         'invitado_id' => $invi->id,
                     ]);
 
-                    $this->invitacione->update(['estado' => '2', 'fecha_respuesta' => date('Y-m-d H:i:s')]);
                 } else {
                     // dd('Este invitado ya confirmó para ese evento');
                 }
             } else {
             }
         }
+
+        $this->invitacione->update(['estado' => '2', 'fecha_respuesta' => date('Y-m-d H:i:s')]);
+
         $this->reset(['newinvitados', 'invitados']);
         return;
     }
