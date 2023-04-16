@@ -64,6 +64,8 @@ class ConfirmacionesIndex extends Component
             2 => 'Amigos',
         ];
 
+        $this->resetPage();
+
         return view('livewire.admin.confirmaciones-index', compact('confirmaciones', 'pors', 'tipos'));
     }
 }

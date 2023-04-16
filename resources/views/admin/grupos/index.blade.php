@@ -3,6 +3,8 @@
 @section('title', 'Grupos')
 
 @section('content_header')
+    <a href="{{ route('admin.invitados.create')}}" class="btn btn-sm btn-success float-right"><i class="fas fa-user-plus"></i> Crear invitado</a>
+    <a href="{{ route('admin.grupos.create')}}" class="btn btn-sm btn-success float-right"><i class="fas fa-users"></i> Crear grupo</a>
     <h1>Confirmaciones</h1>
 @stop
 

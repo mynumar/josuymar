@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Grupo;
+use App\Models\Invitacione;
+use App\Models\Invitado;
 use Illuminate\Http\Request;
 
-class GrupoController extends Controller
+class InvitadoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +17,7 @@ class GrupoController extends Controller
      */
     public function index()
     {
-        return view('admin.grupos.index');
+        //
     }
 
     /**
@@ -25,7 +27,8 @@ class GrupoController extends Controller
      */
     public function create()
     {
-        return view('admin.grupos.create');
+        $grupos = Grupo::orderBy('name')->get();
+        return view('admin.invitados.create', compact('grupos'));
     }
 
     /**
@@ -36,20 +39,27 @@ class GrupoController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name' => 'required']);
+        $request->validate([
+            'nombre' => 'required',
+            'por' => 'required',
+            'tipo' => 'required',
+            'grupo_id' => 'required',
+        ]);
+        Invitado::create($request->all());
 
-        Grupo::create($request->all());
+        $newcantidad = Grupo::find($request->grupo_id)->invitados->count();
+        Invitacione::where('grupo_id', $request->grupo_id)->update(['cantidad' => $newcantidad]);
 
-        return redirect()->route('admin.grupos.index')->with('info', 'Grupo creado correctamente');
+        return redirect()->route('admin.grupos.index')->with('info', 'Invitado creado correctamente');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Grupo  $grupo
+     * @param  \App\Models\Invitado  $invitado
      * @return \Illuminate\Http\Response
      */
-    public function show(Grupo $grupo)
+    public function show(Invitado $invitado)
     {
         //
     }
@@ -57,10 +67,10 @@ class GrupoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Grupo  $grupo
+     * @param  \App\Models\Invitado  $invitado
      * @return \Illuminate\Http\Response
      */
-    public function edit(Grupo $grupo)
+    public function edit(Invitado $invitado)
     {
         //
     }
@@ -69,10 +79,10 @@ class GrupoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Grupo  $grupo
+     * @param  \App\Models\Invitado  $invitado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Grupo $grupo)
+    public function update(Request $request, Invitado $invitado)
     {
         //
     }
@@ -80,10 +90,10 @@ class GrupoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Grupo  $grupo
+     * @param  \App\Models\Invitado  $invitado
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Grupo $grupo)
+    public function destroy(Invitado $invitado)
     {
         //
     }

@@ -62,6 +62,7 @@ class GruposIndex extends Component
                 ->paginate('50');
 
         $eventos = Evento::all();
+        $this->resetPage();
 
         return view('livewire.admin.grupos-index', compact('grupos', 'eventos'));
     }

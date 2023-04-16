@@ -39,6 +39,8 @@ class DeseosIndex extends Component
         if ($this->readyToLoad) {
             $deseos = Deseo::paginate('30');
         }
+
+        $this->resetPage();
         return view('livewire.admin.deseos-index', compact('deseos'));
     }
 }
