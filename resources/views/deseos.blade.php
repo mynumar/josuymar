@@ -177,6 +177,31 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="media event-wrap animate-box"
+                                    style="border: none;-webkit-border-radius: unset;border-radius: unset;">
+                                    <div class="media-body">
+                                        <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
+                                            Kiara Jara</h3>
+                                        <span>
+                                            Mi querida Marjorie quiero decir que te quiero muchísimo y eres una
+                                            maravillosa persona. Gracias por darme esos lindos tratos, abrazos y
+                                            consejos en el pfj nunca los olvidaré. Estoy muy agradecida por permitirme
+                                            ser parte de un día tan especial para ustedes, que es su matrimonio. Les
+                                            deseo mucha felicidad y prosperidad a ambos. Yo sé que nuestro Padre
+                                            Celestial fortalecerá su unión y les acompañará en esta nueva estapa de su
+                                            matrimonio eterno.
+                                        </span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#">
+                                            <img class="media-object media-responsive"
+                                                src="{{ config('app.url') }}/images/couple-1.jpg" alt="..."
+                                                style="width: 100px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
                             {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"
