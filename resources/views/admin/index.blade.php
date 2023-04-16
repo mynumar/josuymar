@@ -92,6 +92,7 @@
                                                         });
                                                     })
                                                     ->count();
+                                                $por_tipo_amigos_total = $por_tipo_amigos_total + $por_tipo_amigos;
                                             @endphp
                                             {{ $por_tipo_amigos }}
                                         </td>
