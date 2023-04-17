@@ -17,6 +17,17 @@ class ConfirmacionesIndex extends Component
     public $tipo;
     public $evento;
     public $eventos;
+    public $sortBy;
+    public $sortDirection = 'asc';
+
+    public function sortBy($field)
+    {
+        $this->sortDirection = $this->sortBy === $field
+            ? $this->reverseSort()
+            : 'asc';
+
+        $this->sortBy = $field;
+    }
 
     public function mount()
     {
@@ -53,7 +64,7 @@ class ConfirmacionesIndex extends Component
             });
         }
 
-        $confirmaciones = $confirmaciones->paginate('50');
+        $confirmaciones = $confirmaciones->orderBy($this->sortBy, $this->sortDirection)->paginate('50');
 
         $pors = [
             1 => 'Josué',

@@ -43,7 +43,10 @@
                             <th>Por</th>
                             <th>Tipo</th>
                             <th>Grupo/Familia</th>
-                            <th>Fecha de confirmación</th>
+                            <th class="" wire:click="sortBy('created_at')" style="cursor:pointer">
+                                Fecha de confirmación
+                                @include('partials._sort-icon', ['field' => 'created_at'])
+                            </th>
                             <th></th>
                         </tr>
                     </thead>
