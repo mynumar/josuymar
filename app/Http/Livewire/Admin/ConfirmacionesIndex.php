@@ -17,8 +17,8 @@ class ConfirmacionesIndex extends Component
     public $tipo;
     public $evento;
     public $eventos;
-    public $sortBy;
-    public $sortDirection = 'asc';
+    public $sortBy = 'created_at';
+    public $sortDirection = 'desc';
 
     public function sortBy($field)
     {
@@ -27,6 +27,13 @@ class ConfirmacionesIndex extends Component
             : 'asc';
 
         $this->sortBy = $field;
+    }
+    
+    public function reverseSort()
+    {
+        return $this->sortDirection === 'asc'
+            ? 'desc'
+            : 'asc';
     }
 
     public function mount()
