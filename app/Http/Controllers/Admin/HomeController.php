@@ -33,7 +33,7 @@ class HomeController extends Controller
         $i = 0;
         foreach ($eventos_ids as $id) {
             $cant_confirmaciones_evento = Confirmacione::whereHas('invitacione', function ($q) use ($id) {
-                $q->where('evento_id', $id);
+                $q->where('evento_id', $id)->whereIn('estado', [2]);
             })->count();
             array_push($confirmaciones, $cant_confirmaciones_evento );
 

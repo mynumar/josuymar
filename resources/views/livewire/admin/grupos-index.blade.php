@@ -1,32 +1,29 @@
 <div wire:init="">
     <div class="card">
         <div class="card-header">
-            <input wire:model="search" class="form-control" placeholder="Ingrese el nombre o apellido de un personale">
-            {{-- <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_noenviado" type="checkbox" id="estado_noenviado">
-                <label class="form-check-label" for="estado_noenviado">
-                    Ver noenviado
-                </label>
+            <div class="form-row">
+                <div class="col">
+                    <input wire:model="search" class="form-control" placeholder="Ingrese el nombre o apellido de un personale">
+                </div>
+                <div class="col">
+                    <select name="estado" wire:model="estado" class="form-control" id="">
+                        <option value="-1">- Todos los estados -</option>
+                        @foreach ($estados as $key => $value)
+                            <option value="{{$key}}">{{$value}}</option>
+                        @endforeach
+                    </select>
+                    {{$estado}}
+                </div>
+                <div class="col">
+                    <select name="evento" wire:model="evento" class="form-control" id="">
+                        <option value="">- Todos los eventos -</option>
+                        @foreach ($eventos_all as $ev)
+                        <option value="{{$ev->id}}">{{$ev->name}}</option>
+                        @endforeach
+                    </select>
+                    {{$evento}}
+                </div>
             </div>
-            <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_enviado" type="checkbox" id="estado_enviado">
-                <label class="form-check-label" for="estado_enviado">
-                    Ver enviados
-                </label>
-            </div>
-            <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_confirmado" type="checkbox" id="estado_confirmado">
-                <label class="form-check-label" for="estado_confirmado">
-                    Ver confirmados
-                </label>
-            </div>
-            <div class="form-check mt-2 d-inline">
-                <input class="form-check-input" wire:model="estado_anulado" type="checkbox" id="estado_anulado">
-                <label class="form-check-label" for="estado_anulado">
-                    Ver anulados
-                </label>
-            </div> --}}
-
         </div>
         @if ($grupos->count())
             <div class="card-body">
@@ -37,8 +34,8 @@
                             <th>id</th>
                             <th>Nombre</th>
                             <th>Personas</th>
-                            @foreach ($eventos as $evento)
-                                <th class="text-center">{{ $evento->name }}</th>
+                            @foreach ($eventos as $e)
+                                <th class="text-center">{{ $e->name }}</th>
                             @endforeach
                         </tr>
                     </thead>
@@ -48,15 +45,15 @@
                                 <td>{{ $grupo->id }}</td>
                                 <td>{{ $grupo->name }}</td>
                                 <td>{{ $grupo->invitados->count() }}</td>
-                                @foreach ($eventos as $evento)
+                                @foreach ($eventos as $evento_)
                                     <td class="text-center">
                                         @php
-                                            $invitacione = \App\Models\Invitacione::where('evento_id', $evento->id)
+                                            $invitacione = \App\Models\Invitacione::where('evento_id', $evento_->id)
                                                 ->where('grupo_id', $grupo->id)
                                                 ->first();
                                         @endphp
-                                        @if (empty($evento->invitaciones->where('grupo_id', $grupo->id)->first()))
-                                            <button wire:click="invitar({{ $evento->id }}, {{ $grupo->id }})"
+                                        @if (empty($evento_->invitaciones->where('grupo_id', $grupo->id)->first()))
+                                            <button wire:click="invitar({{ $evento_->id }}, {{ $grupo->id }})"
                                                 class="btn btn-sm btn-success">
                                                 <i class="fas fa-user-plus"></i>
                                             </button>

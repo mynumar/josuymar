@@ -103,10 +103,10 @@
                                         <td class="text-center border-left">
                                             @php
                                                 $confirmados_familia = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
-                                                    $q->where('por', $item)->where('tipo', '1');
-                                                })
+                                                        $q->where('por', $item)->where('tipo', '1');
+                                                    })
                                                     ->whereHas('invitacione', function ($q) use ($evento) {
-                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [2]);
                                                     })
                                                     ->count();
                                                 $confirmados_familia_total = $confirmados_familia_total + $confirmados_familia;
@@ -116,10 +116,10 @@
                                         <td class="text-center">
                                             @php
                                                 $confirmados_amigos = \App\Models\Confirmacione::whereHas('invitado', function ($q) use ($item) {
-                                                    $q->where('por', $item)->where('tipo', '2');
-                                                })
+                                                        $q->where('por', $item)->where('tipo', '2');
+                                                    })
                                                     ->whereHas('invitacione', function ($q) use ($evento) {
-                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [1, 2]);
+                                                        $q->where('evento_id', $evento->id)->whereIn('estado', [2]);
                                                     })
                                                     ->count();
                                                 $confirmados_amigos_total = $confirmados_amigos_total + $confirmados_amigos;

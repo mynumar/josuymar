@@ -13,7 +13,8 @@ class GruposIndex extends Component
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
     public $search;
-    public $url_wap;
+    public $evento;
+    public $estado = '-1';
 
     protected $listeners = ['invitacioneEnviada' => 'invitacioneEnviada'];
 
@@ -48,22 +49,43 @@ class GruposIndex extends Component
 
     }
 
-    public function setMessage(Evento $evento, Grupo $grupo){
-        $invitacione = Invitacione::where('evento_id', $evento->id)->where('grupo_id', $grupo->id)->first();
-        $msg = "https://api.whatsapp.com/send/?phone=923731605&text=Hola%20familia%20%F0%9F%A4%97%0A%0A%C2%A1Nos%20casamos%20y%20queremos%20celebrarlo%20contigo!%20Hemos%20preparado%20un%20espacio%20para%20confirmar%20tu%20asistencia%20a%20nuestra%20boda,%20donde%20tambi%C3%A9n%20podr%C3%A1s%20explorar%20sus%20secciones.%20An%C3%ADmate%20a%20dejarnos%20tus%20deseos,%20ser%C3%A1%20especial%20leerlos.%0A%0AIngresa%20a%20https://josuymar.lat/%0A%0AAl%20hacer%20clic%20en%20confirmar%20asistencia%20les%20aparece%20un%20peque%C3%B1o%20formulario%20deben%20ingresar%20su%20apellido%20de%20familia%20y%20c%C3%B3digo:%0A%0AApellido%20de%20familia:".$grupo->nombre."%0ACodigo:".$invitacione->codigo."&type=phone_number&app_absent=0";
-
-        return $msg;
-    }
+   
 
     public function render()
     {
         $that = $this;
-        $grupos = Grupo::where('name', 'like', '%'.trim($this->search).'%')
-                ->paginate('50');
+        $eventos_all = Evento::all();
 
-        $eventos = Evento::all();
+        $grupos = Grupo::where('name', 'like', '%'.trim($this->search).'%');
+
+        if (empty($that->evento)) {
+            $eventos = Evento::all();
+        } else {
+            $eventos = Evento::where('id', $that->evento)->get();
+            $grupos = $grupos->whereHas('invitaciones', function ($q) use ($that){
+                $q->where('evento_id', $that->evento);
+                if ($that->estado != '-1') {
+                $q->where('estado', $that->estado);
+                }
+            });
+        }
+        
+        if ($that->estado != '-1') {
+            $grupos = $grupos->whereHas('invitaciones', function ($q) use ($that){
+                        $q->where('estado', $that->estado);
+                    });
+        }
+        
+        $grupos = $grupos->paginate('50');
         $this->resetPage();
 
-        return view('livewire.admin.grupos-index', compact('grupos', 'eventos'));
+        $estados = [
+            '0' => 'No enviado',
+            '1' => 'Enviado',
+            '2' => 'Confirmado',
+            '3' => 'Anulado',
+        ];
+
+        return view('livewire.admin.grupos-index', compact('grupos', 'eventos', 'estados', 'eventos_all'));
     }
 }
