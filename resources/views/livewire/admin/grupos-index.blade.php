@@ -12,7 +12,6 @@
                             <option value="{{$key}}">{{$value}}</option>
                         @endforeach
                     </select>
-                    {{$estado}}
                 </div>
                 <div class="col">
                     <select name="evento" wire:model="evento" class="form-control" id="">
@@ -21,7 +20,6 @@
                         <option value="{{$ev->id}}">{{$ev->name}}</option>
                         @endforeach
                     </select>
-                    {{$evento}}
                 </div>
             </div>
         </div>
