@@ -41,7 +41,7 @@ class DeseosIndex extends Component
     {
         $deseos = [];
         if ($this->readyToLoad) {
-            $deseos = Deseo::paginate('50');
+            $deseos = Deseo::paginate('30');
         }
 
         $this->resetPage();
