@@ -48,10 +48,12 @@ class InvitacionesIndex extends Component
             $invitaciones = $invitaciones->where('evento_id', $this->evento);
         }
         
-        $invitaciones = $invitaciones->paginate('50');
+        $invitaciones = $invitaciones->paginate('15');
 
         $this->resetPage();
 
         return view('livewire.admin.invitaciones-index', compact('invitaciones'));
     }
+
+    
 }

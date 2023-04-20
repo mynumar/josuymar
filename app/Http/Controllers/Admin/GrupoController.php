@@ -51,7 +51,7 @@ class GrupoController extends Controller
      */
     public function show(Grupo $grupo)
     {
-        //
+        return view('admin.grupos.show', compact('grupo'));
     }
 
     /**

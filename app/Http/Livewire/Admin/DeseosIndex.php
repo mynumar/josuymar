@@ -19,7 +19,11 @@ class DeseosIndex extends Component
         $this->readyToLoad = true;
         $this->emit('readytoload');
     }
-
+    public function gotoPage($page)
+    {
+        $this->setPage($page);
+        $this->emit('readytoload');
+    }
     public function changeEstado(Deseo $deseo)
     {
         $newestado = !$deseo->estado;
@@ -37,7 +41,7 @@ class DeseosIndex extends Component
     {
         $deseos = [];
         if ($this->readyToLoad) {
-            $deseos = Deseo::paginate('30');
+            $deseos = Deseo::paginate('5');
         }
 
         $this->resetPage();

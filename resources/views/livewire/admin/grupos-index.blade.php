@@ -32,6 +32,7 @@
                             <th>id</th>
                             <th>Nombre</th>
                             <th>Personas</th>
+                            <th>Ver</th>
                             @foreach ($eventos as $e)
                                 <th class="text-center">{{ $e->name }}</th>
                             @endforeach
@@ -43,6 +44,10 @@
                                 <td>{{ $grupo->id }}</td>
                                 <td>{{ $grupo->name }}</td>
                                 <td>{{ $grupo->invitados->count() }}</td>
+                                <td width="10px">
+                                    <a href="{{ route('admin.grupos.show', $grupo) }}"
+                                        class="btn btn-sm btn-primary">Ver</a>
+                                </td>
                                 @foreach ($eventos as $evento_)
                                     <td class="text-center">
                                         @php
@@ -83,9 +88,7 @@
                                         @endif
                                     </td>
                                 @endforeach
-                                <td>
-
-                                </td>
+                               
                             </tr>
                         @endforeach
 
