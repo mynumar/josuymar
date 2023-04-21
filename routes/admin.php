@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\InvitacioneController;
 use App\Http\Controllers\Admin\InvitadoController;
 
 Route::resource('', HomeController::class)->names('admin');
+Route::get('invitaciones/{invitacione}/rechazados', [InvitacioneController::class, 'rechazadosInvitacione'])->name('admin.invitaciones.rechazados-invitacione');
+Route::get('invitaciones/rechazados', [InvitacioneController::class, 'rechazados'])->name('admin.invitaciones.rechazados');
 Route::resource('invitaciones', InvitacioneController::class)->names('admin.invitaciones');
 Route::resource('confirmaciones', ConfirmacioneController::class)->names('admin.confirmaciones');
 Route::resource('deseos', DeseoController::class)->names('admin.deseos');

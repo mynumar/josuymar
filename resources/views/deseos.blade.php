@@ -202,6 +202,25 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-12">
+                                <div class="media event-wrap animate-box"
+                                    style="border: none;-webkit-border-radius: unset;border-radius: unset;">
+                                    <div class="media-body">
+                                        <h3 class="media-heading" style="border-bottom: unset;padding-bottom: unset;">
+                                            Maricielo Rosero</h3>
+                                        <span>
+                                            Mi gran amiga Marjorie, (mi Mayito❤) hace más de 15 años que nos conocemos, aun recuerdo cuando éramos unas niñas y jugábamos. Me llena de felicidad saber que en este día tan especial pueda compartirla a tu lado, gracias por esta bella amistad que me has brindado al transcurrir estos años, sabes lo mucho que te quiero y les deseo de todo corazón que en esta etapa, su matrimonio esté llena de bendiciones, amor, respeto, éxitos y sigan siendo un gran equipo 👫🏻. Los quiero mucho 🤍
+                                        </span>
+                                    </div>
+                                    <div class="media-right">
+                                        <a href="#">
+                                            <img class="media-object media-responsive"
+                                                src="{{ config('app.url') }}/images/couple-1.jpg" alt="..."
+                                                style="width: 100px;">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 
                             {{-- <div class="col-12">
                                 <div class="media event-wrap animate-box"

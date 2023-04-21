@@ -96,8 +96,11 @@
                                 <td>{{ $invitacione->cantidad }}</td>
                                 <td>{{ $invitacione->confirmaciones->count() }}</td>
                                 <td>
+                                    @php
+                                        $rechazados = $invitacione->cantidad - $invitacione->confirmaciones->count();
+                                    @endphp
                                     @if ($invitacione->estado == 2)
-                                        {{ $invitacione->cantidad - $invitacione->confirmaciones->count() }}
+                                        {{ $rechazados }}
                                     @else
                                         0
                                     @endif

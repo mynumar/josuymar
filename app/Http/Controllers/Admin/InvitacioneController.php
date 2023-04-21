@@ -7,6 +7,7 @@ use App\Imports\GruposImport;
 use App\Imports\InvitacionesImport;
 use App\Imports\InvitadosImport;
 use App\Models\Invitacione;
+use App\Models\Invitado;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Validation\ValidationException;
@@ -52,7 +53,7 @@ class InvitacioneController extends Controller
      */
     public function show(Invitacione $invitacione)
     {
-        dd($invitacione->grupo->invitados);
+        //dd($invitacione->grupo->invitados);
         return view('admin.invitaciones.show', compact('invitacione'));
     }
 
@@ -138,5 +139,16 @@ class InvitacioneController extends Controller
 
 
         return redirect()->route('admin.invitaciones.index')->with('info', 'Se cargó los invitados correctamente');
+    }
+
+    public function rechazadosInvitacione(Invitacione $invitacione){
+
+        $rechazados =  $invitacione->rechazados();
+
+        return view('admin.invitaciones.', compact('rechazados'));
+    }
+
+    public function rechazados(){
+        return view('admin.invitaciones.rechazados');
     }
 }

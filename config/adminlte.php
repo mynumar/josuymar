@@ -322,6 +322,11 @@ return [
             'icon'        => 'far fa-envelope-open',
         ],
         [
+            'text'        => 'Rechazados',
+            'route'       => 'admin.invitaciones.rechazados',
+            'icon'        => 'far fa-envelope-open',
+        ],
+        [
             'text'        => 'Deseos',
             'route'         => 'admin.deseos.index',
             'icon'        => 'far fa-envelope-open',

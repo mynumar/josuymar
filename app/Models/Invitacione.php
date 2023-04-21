@@ -22,4 +22,19 @@ class Invitacione extends Model
     public function confirmaciones(){
         return $this->hasMany(Confirmacione::class);
     }
+
+    public function rechazados(){
+        $invitados = $this->grupo->invitados;
+        $confirmaciones = $this->confirmaciones;
+        $rechazados = null;
+        if($this->estado == 2){
+            foreach ($confirmaciones as $confirmacione) {
+                $invitados = $invitados->except($confirmacione->invitado_id);
+            }
+            $rechazados = $invitados;
+        }
+
+        return $rechazados;
+    }
+
 }
