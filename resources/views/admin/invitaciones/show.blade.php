@@ -72,6 +72,8 @@
                             </tr>
                             @endforeach
                         </tbody>
+                        @empty($invitacione->rechazados())
+                        @else
                         @if ($invitacione->rechazados()->count())
                         <thead>
                             <tr>
@@ -86,6 +88,7 @@
                             @endforeach
                         </tbody>
                         @endif
+                        @endempty
                     </table>
                 </div>
             </div>
