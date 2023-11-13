@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="Josué y Marjorie">
-    <meta name="title" content="Josu&Mar">
-    <meta name="keywords" content="josuymar, nos casamos, matrimonio, josue, marjorie, boda">
+    <meta name="author" content="{{ config('app.author') }}">
+    <meta name="title" content="{{ config('app.name') }}">
+    <meta name="keywords" content="aleandsky, nos casamos, matrimonio, alejandra villar, akyler lemon, boda">
     <meta name="description" content="{{ config('app.description', 'JosuyMar' ) }}">
     <meta property="og:image" content="{{ config('app.url', 'http://localhost/').'/images/logo-cuadrado.jpg' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,7 @@
     @livewireStyles
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-sans antialiased" style="background-color: #FFFFFF">
     <div class="fh5co-loader"></div>
     {{-- <x-jet-banner /> --}}
     <div id="page" class="">
@@ -72,7 +72,7 @@
         @endif --}}
         @if (isset($header))
             <header id="fh5co-header" class="fh5co-cover" role="banner"
-                style="background-image:url({{ config('app.url') }}/images/CC_Pedida6.jpg); background-position: center;"
+                style="background-image:url({{ config('app.url') }}/images/aleandsky/CC_Pedida6.jpg);background-size:cover; background-position: center;"
                 data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
                 <div class="container m-auto">
@@ -97,7 +97,7 @@
                     <div class="row copyright">
                         <div class="col-md-12 text-center">
                             <p>
-                                <small class="block">&copy; 2023 Marjorie y Josué</small>
+                                <small class="block">&copy; 2023 Josu&Mar Developers</small>
                                 <small class="block">Agradecidos de antemano
                                     {{-- <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a>
                                     Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> --}}

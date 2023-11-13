@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h1>Josué & Marjorie</h1>
+        <h1>Alejandra & Skyler</h1>
         <h2>Nos casamos en</h2>
         <div class="simply-countdown simply-countdown-one"></div>
         <p><a href="{{route('confirmar-asistencia')}}" class="btn btn-default btn-sm">Confirmar mi asistencia</a></p>
@@ -18,30 +18,28 @@
             <div class="couple-wrap animate-box">
                 <div class="couple-half">
                     <div class="groom">
-                        <img src="{{ config('app.url') }}/images/SP_josu3.jpg" alt="SP_josu2" class="img-responsive">
+                        <img src="{{ config('app.url') }}/images/aleandsky/SP_novio.jpg" alt="SP_novio" class="img-responsive" style="object-fit: cover">
                     </div>
                     <div class="desc-groom">
-                        <h3>Josué Vitate</h3>
-                        <p>Desde que la vi la pureza de su alma me hizo querer conocerla. Al caminar juntos me doy 
-                            cuenta de que es ella capaz de ayudarme a llegar a la Gloria Celestial.</p>
+                        <h3>Skyler Lemon</h3>
+                        <p>Siempre me llenas de felicidad. En mis sueños estás, en mis pensamientos, y mis palabras. Me enseñaste que significa amar en pareja. Y te quiero enseñar una vida de bendiciones</p>
                     </div>
                 </div>
                 <p class="heart text-center"><i class="icon-heart2"></i></p>
                 <div class="couple-half">
                     <div class="bride">
-                        <img src="{{ config('app.url') }}/images/SP_marjo2.jpg" alt="SP_marjo" class="img-responsive">
+                        <img src="{{ config('app.url') }}/images/aleandsky/SP_novia.jpg" alt="SP_novia" class="img-responsive" style="object-fit: cover">
                     </div>
                     <div class="desc-bride">
-                        <h3>Marjorie Ynuma</h3>
-                        <p>La ternura con la que me mira ha llegado a mi corazón y es la causante de
-                            amarlo. Quiero que esa misma mirada me acompañe en las eternidades.</p>
+                        <h3>Alejandra Villar</h3>
+                        <p>Cuando te conocí jamás creí que tendría a un compañero eterno tan maravilloso, que me elevara y me acercara más a Dios. Eres todo lo que siempre pedí y más. Te amo.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="fh5co-event" class="fh5co-bg" style="background-image:url({{ config('app.url') }}/images/bg_02.jpg);">
+    <div id="fh5co-event" class="fh5co-bg" style="background-image:url({{ config('app.url') }}/images/aleandsky/Templo-de-Saratoga-Spring.webp);">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
@@ -55,7 +53,7 @@
                     <div class="display-tc">
                         <div class="col-md-10 col-md-offset-1">
                             @foreach ($eventos as $evento)
-                                <div class="col-md-4 col-sm-4 text-center" >
+                                <div class="col-md-6 col-sm-6 text-center" >
                                     <div class="event-wrap animate-box" style="min-height: 390px">
                                         <h3>{{$evento->name}}</h3>
                                         <div class="event-col">
@@ -130,7 +128,7 @@
 </x-app-layout>
 <script>
     // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-    var d = new Date('2023-05-19 20:00:00 GMT-5:00');
+    var d = new Date('2024-01-12 20:00:00 GMT-5:00');
 
     // default example
     simplyCountdown('.simply-countdown-one', {

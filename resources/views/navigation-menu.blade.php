@@ -2,7 +2,7 @@
     <div class="container m-auto">
         <div class="row">
             <div class="col-xs-2">
-                <div id="fh5co-logo"><a href="{{ route('index') }}"><strong>Josu&Mar</strong></a></div>
+                <div id="fh5co-logo"><a href="{{ route('index') }}"><strong>{{config('app.name')}}</strong></a></div>
                 <h1 style="display: none;">josuymar</h1>
             </div>
             <div class="col-xs-10 text-right menu-1">
