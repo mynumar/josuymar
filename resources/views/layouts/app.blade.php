@@ -7,7 +7,7 @@
     <meta name="title" content="{{ config('app.name') }}">
     <meta name="keywords" content="aleandsky, nos casamos, matrimonio, alejandra villar, akyler lemon, boda">
     <meta name="description" content="{{ config('app.description', 'JosuyMar' ) }}">
-    <meta property="og:image" content="{{ config('app.url', 'http://localhost/').'/images/logo-cuadrado.jpg' }}">
+    <meta property="og:image" content="{{ config('app.url', 'http://localhost/').'/images/aleandsky/image_6487327_.JPG' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{config('app.url')}}/images/corazon2.png">
