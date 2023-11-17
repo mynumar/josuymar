@@ -14,7 +14,9 @@
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
                     <span>TU PRESENCIA ES INVALUABLE</span>
                     <h2>Un detalle con nosotros</h2>
-                        <p class="mb-4">El regalo de su presencia es invaluable, pero si están pensando en apoyarnos, les agradecemos que por favor lo hagan con un aporte de dinero en efectivo. ¡Muchas gracias!</p>
+                        <p class="mb-4">El regalo de su presencia es invaluable, pero si están pensando en apoyarnos, les agradecernos de todo corazón.
+                            {{-- les agradecemos que por favor lo hagan con un aporte de dinero en efectivo.  --}}
+                            ¡Muchas gracias!</p>
                 </div>
             </div>
             <div class="row">
