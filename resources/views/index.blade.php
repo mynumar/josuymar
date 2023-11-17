@@ -10,9 +10,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                    <h2>¡Hola!</h2>
-                    {{-- <h3>19 de Mayo, 2023 Lima, Perú</h3>
-                    <p>Te invitamos a celebrar nuestra boda</p> --}}
+                    <h2>Hi!</h2>
+                    {{-- <h3>19 de Mayo, 2023 Lima, Perú</h3> --}}
+                    <p>We are pleased to announce our wedding in the Saratoga Springs Utah Temple on January 12th 2024 
+                    </p>
                 </div>
             </div>
             <div class="couple-wrap animate-box">
@@ -56,12 +57,15 @@
                                 <div class="col-md-6 col-sm-6 text-center" >
                                     <div class="event-wrap animate-box" style="min-height: 390px">
                                         <h3>{{$evento->name}}</h3>
-                                        <div class="event-col">
+                                        <div class="event-col" >
+                                            @if (date('h:i A', strtotime($evento->fecha_inicio)) != '12:00 AM')
                                             <i class="icon-clock"></i>
                                             <span>{{date('h:i A', strtotime($evento->fecha_inicio))}}</span>
                                             <span>{{date('h:i A', strtotime($evento->fecha_fin))}}</span>
+                                                
+                                            @endif
                                         </div>
-                                        <div class="event-col">
+                                        <div class="event-col" @if (date('h:i A', strtotime($evento->fecha_inicio)) == '12:00 AM') style="width:100%"  @endif>
                                             <i class="icon-calendar"></i>
                                             <span>{{date('l d', strtotime($evento->fecha_inicio))}}</span>
                                             <span>{{date('M, Y', strtotime($evento->fecha_inicio))}}</span>

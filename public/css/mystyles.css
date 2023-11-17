@@ -1,26 +1,26 @@
 .btn-jym{
-    background-color: #E4717A;
+    background-color: #284563; /*E4717A;*/
 }
 .btn-jym:hover{
     background-color: white;
-    color: #E4717A;
-    border: solid 1px #E4717A;
+    color: #284563; /*E4717A;*/
+    border: solid 1px #284563; /*E4717A;*/
     font-weight: bold;
 }
 
 .btn-jym-w{
     background-color: white;
-    color: #E4717A;
+    color: #284563; /*E4717A;*/
     padding: 15px 20px;
     border-radius: 30px;
     font-size: 14px;
 }
 .btn-jym-w:hover{
-    background-color: #E4717A;
+    background-color: #284563; /*E4717A;*/
     color: white;
 }
 .btn-jym-r{
-    background-color: #E4717A;
+    background-color: #284563; /*E4717A;*/
     color: white;
     padding: 15px 20px;
     border-radius: 30px;
@@ -28,15 +28,15 @@
 }
 .btn-jym-r:hover{
     background-color: white;
-    color: #E4717A;
-    border:#E4717A solid 1px
+    color: #284563; /*E4717A;*/
+    border:#284563; /*E4717A solid 1px*/
 }
 .rosado-jym{
-    color: #E4717A!important;
+    color: #284563; /*E4717A!important;*/
 }
 .font-sacramento{
     font-weight: bold;
-    color: #E4717A;
+    color: #284563; /*E4717A;*/
     font-family: "Sacramento", Arial, serif;
 }
 
@@ -52,7 +52,7 @@
 
 .foto-padres{
     border-radius: 20px;
-    border: 3px solid #e4717a;
+    border: 3px solid #284563; /*e4717a;*/
 }
 .text-plomo{
     text-transform: uppercase;
@@ -71,11 +71,11 @@
     color: rgba(0, 0, 0, 0.4);
 }
 .jym-link:hover{
-    color: #e4717a;
+    color: #284563; /*e4717a;*/
 }
 .jym-link-white{
     color: rgba(255, 255, 255, 1);
 }
 .jym-link-white:hover{
-    color: #e4717a;
+    color: #284563; /*e4717a;*/
 }

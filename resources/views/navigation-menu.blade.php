@@ -25,7 +25,7 @@
                             <li><a href="#">Pedida</a></li>
                         </ul>
                     </li> --}}
-                    <li><a target="_blank" href="{{route('admin.index')}}">Ingresar</a></li>
+                    {{-- <li><a target="_blank" href="{{route('admin.index')}}">Ingresar</a></li> --}}
                 </ul>
             </div>
         </div>

@@ -2,7 +2,7 @@
     <x-slot name="header">
         <h1>Historia</h1>
         <h2>Sé parte de nuestra hermosa historia
-            <a href="{{ config('app.fb') }}" target="_blank">josuymar</a>
+            <a href="#" target="_blank">aleandsky</a>
         </h2>
     </x-slot>
 

@@ -296,7 +296,7 @@
   }
   
   .fh5co-cover {
-    height: 748px;
+    height: 100vh;
     background-size: auto 130%;
     background-repeat: no-repeat;
     background-position: center !important;
@@ -768,7 +768,7 @@
     display: -moz-inline-stack;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    display: inline;
     color: #284563;
     padding-left: 10px;
     padding-right: 10px;
