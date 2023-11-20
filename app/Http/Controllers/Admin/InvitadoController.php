@@ -20,6 +20,7 @@ class InvitadoController extends Controller
         $invitados = Invitado::select('nombre', 'created_at')->orderBy('created_at')->get()->toArray();
         // dd($invitados);
 
+        $inv = null;
         foreach ($invitados as $value) {
             $inv[] = [$value['nombre'], date( 'd/m/Y H:i:s', strtotime($value['created_at'])) ];
         }
