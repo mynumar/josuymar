@@ -316,31 +316,31 @@ return [
             'route'         => 'admin.invitados.index',
             'icon'        => 'far fa-envelope-open',
         ],
-        [
-            'text'        => 'Invitaciones',
-            'route'         => 'admin.invitaciones.index',
-            'icon'        => 'far fa-envelope-open',
-        ],
-        [
-            'text'        => 'Confirmaciones',
-            'route'         => 'admin.confirmaciones.index',
-            'icon'        => 'far fa-envelope-open',
-        ],
-        [
-            'text'        => 'Rechazados',
-            'route'       => 'admin.invitaciones.rechazados',
-            'icon'        => 'far fa-envelope-open',
-        ],
-        [
-            'text'        => 'Deseos',
-            'route'         => 'admin.deseos.index',
-            'icon'        => 'far fa-envelope-open',
-        ],
-        [
-            'text'        => 'Grupos',
-            'route'         => 'admin.grupos.index',
-            'icon'        => 'far fa-user',
-        ],
+        // [
+        //     'text'        => 'Invitaciones',
+        //     'route'         => 'admin.invitaciones.index',
+        //     'icon'        => 'far fa-envelope-open',
+        // ],
+        // [
+        //     'text'        => 'Confirmaciones',
+        //     'route'         => 'admin.confirmaciones.index',
+        //     'icon'        => 'far fa-envelope-open',
+        // ],
+        // [
+        //     'text'        => 'Rechazados',
+        //     'route'       => 'admin.invitaciones.rechazados',
+        //     'icon'        => 'far fa-envelope-open',
+        // ],
+        // [
+        //     'text'        => 'Deseos',
+        //     'route'         => 'admin.deseos.index',
+        //     'icon'        => 'far fa-envelope-open',
+        // ],
+        // [
+        //     'text'        => 'Grupos',
+        //     'route'         => 'admin.grupos.index',
+        //     'icon'        => 'far fa-user',
+        // ],
         // [
             // 'label_color' => 'success',
             // 'label'       => 4,
