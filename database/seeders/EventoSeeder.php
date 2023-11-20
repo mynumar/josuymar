@@ -38,8 +38,8 @@ class EventoSeeder extends Seeder
         Evento::create([
             'name' => 'Fiesta de bodas',
             'estado' => '1',
-            'fecha_inicio' => '2024-01-12 20:00:00',
-            'fecha_fin' => '2024-01-12 01:00:00',
+            'fecha_inicio' => '2024-01-12 18:00:00',
+            'fecha_fin' => '2024-01-12 22:00:00',
             'ubicacion' => 'https://maps.app.goo.gl/iKCbYTwk4U1vYuEJ6',
             'name_lugar' => 'The Church of Jesus Christ Of Latter-day Saints',
             'direccion' => '300 west 3200 north, Lehi Utah 84043',
