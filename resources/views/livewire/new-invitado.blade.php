@@ -21,7 +21,7 @@
         <p class="mb-4">Podrás asistir?</p>
     </div>
     <div class="mb-4">
-        <input type="text" class="text-3xl my-2 " wire:model="fullname" wire:keydown.enter="asistire"
+        <input type="text" class="text-3xl my-2 " wire:model="fullname" wire:keydown.enter="asistire" style="min-width: 267px;"
             placeholder="Escribe tu nombre completo">
         <x-jet-input-error class="text-sm text-red-600" for="fullname" />
     </div>
