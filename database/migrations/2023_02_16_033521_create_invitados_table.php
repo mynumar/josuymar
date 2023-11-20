@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('conjunto')->nullable();
             $table->string('subconjunto')->nullable();
             $table->tinyInteger('tipo')->nullable();
-            $table->tinyInteger('por');
+            $table->tinyInteger('por')->nullable();
             $table->foreignId('grupo_id')->constrained();
             $table->timestamps();
         });
